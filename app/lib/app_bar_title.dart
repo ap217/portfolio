@@ -2,12 +2,10 @@ import 'package:flutter/material.dart';
 
 class AppBarTitle extends StatelessWidget {
   final String text;
-  //final Function ontab;
 
   AppBarTitle({
     required this.text,
     required bool hovered,
-    /*@required this.ontab*/
   });
   @override
   Widget build(BuildContext context) {

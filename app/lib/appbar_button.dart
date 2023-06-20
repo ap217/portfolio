@@ -5,7 +5,6 @@ class HoverTextButton extends StatefulWidget {
   final String text;
 
   const HoverTextButton({
-    // required Key key,
     required this.onPressed,
     required this.text,
   });
@@ -32,19 +31,10 @@ class _HoverTextButtonState extends State<HoverTextButton> {
       },
       child: TextButton(
         onPressed: widget.onPressed,
-        child: Text(
-          widget.text,
-          textAlign: TextAlign.center,
-          style: const TextStyle(
-              fontSize: 20.0,
-              letterSpacing: 3.0,
-              color: Colors.white,
-              fontWeight: FontWeight.bold),
-        ),
         style: ButtonStyle(
           padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.symmetric(
               horizontal: MediaQuery.of(context).size.width * 0.01,
-              vertical: 22.0)),
+              vertical: 18.0)),
           side: isHovered
               ? MaterialStateProperty.all<BorderSide>(
                   const BorderSide(color: Color(0xff48E1EC), width: 1.0),
@@ -56,20 +46,16 @@ class _HoverTextButtonState extends State<HoverTextButton> {
             ),
           ),
         ),
+        child: Text(
+          widget.text,
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+              fontSize: 20.0,
+              letterSpacing: 2.0,
+              color: Colors.white,
+              fontWeight: FontWeight.bold),
+        ),
       ),
-      // style: ButtonStyle(
-      //   side: MaterialStateProperty.all<BorderSide>(
-      //     isHovered
-      //         ? BorderSide(color: Color(0xff48E1EC), width: 1.0)
-      //         : BorderSide.none,
-      //   ),
-      //   shape: MaterialStateProperty.all<OutlinedBorder>(
-      //     RoundedRectangleBorder(
-      //       borderRadius: BorderRadius.circular(20.0),
-      //     ),
-      //   ),
-      // ),
-      // ),
     );
   }
 }

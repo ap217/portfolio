@@ -95,15 +95,9 @@ class _FooterPageState extends State<FooterPage> {
                 const SizedBox(
                   height: 40,
                 ),
-                SingleChildScrollView(
+                const SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
-                    // height: 70,
-                    // width: 300,
-
-                    // child: Container(
-                    //   child: const Row(
-                    //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       SocialMediaIconButton(
                         icon: FontAwesomeIcons.facebook,
@@ -124,17 +118,15 @@ class _FooterPageState extends State<FooterPage> {
                     ],
                   ),
                 ),
-                // ),
-                // ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                   child: Text("© 2023 Aditya Patel. All rights reserved.",
                       style: TextStyle(color: Colors.white54, fontSize: 15.0)),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
               ],

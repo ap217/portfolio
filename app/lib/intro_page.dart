@@ -1,151 +1,3 @@
-// import 'dart:async';
-
-// import 'package:flutter/material.dart';
-// import 'package:url_launcher/url_launcher.dart';
-// import 'model/Method.dart';
-
-// class IntroPage extends StatefulWidget {
-//   @override
-//   _IntroPageState createState() => _IntroPageState();
-// }
-
-// class _IntroPageState extends State<IntroPage> {
-//   List<String> predefinedTexts = [
-//     'WELCOME TO MY PORTFOLIO!',
-//     'मेरे पोर्टफोलियो में आपका स्वागत है!',
-//     'મારા પોર્ટફોલિયોમાં આપનું સ્વાગત છે!',
-//     'Bienvenido a mi cartera!',
-//     '私のポートフォリオへようこそ!',
-//     '歡迎來到我的作品集!',
-//     'ДОБРО ПОЖАЛОВАТЬ В МОЁ ПОРТФОЛИО!',
-//     'BIENVENUE DANS MON PORTEFEUILLE!',
-//   ];
-//   String currentText = '';
-//   Timer? timer;
-//   int currentIndex = 0;
-
-//   @override
-//   void initState() {
-//     super.initState();
-//     // Start the timer when the widget is initialized
-//     startTimer();
-//   }
-
-//   @override
-//   void dispose() {
-//     // Cancel the timer when the widget is disposed to avoid memory leaks
-//     timer?.cancel();
-//     super.dispose();
-//   }
-
-//   void startTimer() {
-//     // Start a new timer that changes the text every 2-3 seconds
-//     timer = Timer.periodic(Duration(milliseconds: 1500), (Timer timer) {
-//       setState(() {
-//         // Update the current text to the next predefined text
-//         currentText = predefinedTexts[currentIndex];
-//         // Increment the index to move to the next predefined text
-//         currentIndex = (currentIndex + 1) % predefinedTexts.length;
-//       });
-//     });
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     Method method = new Method();
-//     String str =
-//         "Student Developer Who Exploring New Things In Dev Part Of IT World";
-//     return Column(
-//       children: [
-//         Container(
-//           height: MediaQuery.of(context).size.height * 0.8,
-//           padding: EdgeInsets.fromLTRB(50.0, 100.0, 60.0, 0.0),
-//           child: Column(
-//             crossAxisAlignment: CrossAxisAlignment.start,
-//             children: [
-//               const SizedBox(
-//                 height: 20.0,
-//               ),
-//               const Text(
-//                 'Hi There! I am,',
-//                 style: TextStyle(
-//                     color: Color(0xff48E1EC),
-//                     fontWeight: FontWeight.bold,
-//                     fontSize: 25.0),
-//               ),
-//               const SizedBox(
-//                 height: 5.0,
-//               ),
-//               const Text(
-//                 'Aditya Patel',
-//                 style: TextStyle(
-//                     color: Colors.white,
-//                     fontWeight: FontWeight.bold,
-//                     fontSize: 85.0),
-//               ),
-//               const SizedBox(
-//                 height: 5.0,
-//               ),
-//               Text(
-//                 currentText,
-//                 style: const TextStyle(
-//                     color: Colors.white54,
-//                     fontWeight: FontWeight.bold,
-//                     fontSize: 40.0),
-//               ),
-//               const SizedBox(
-//                 height: 40.0,
-//               ),
-//               Row(
-//                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                 children: [
-//                   SizedBox(
-//                     height: 65,
-//                     width: 200,
-//                     child: ElevatedButton(
-//                       style: ElevatedButton.styleFrom(
-//                         primary: Color(0xff0A192F),
-//                         onPrimary: Color(0xff48E1EC),
-//                         shape: RoundedRectangleBorder(
-//                             borderRadius: BorderRadius.circular(6.0),
-//                             side: const BorderSide(color: Color(0xff48E1EC))),
-//                       ),
-//                       // color: Color(0xff0A192F),
-//                       onPressed: () async {
-//                         await goToWebPage(
-//                             "https://www.linkedin.com/in/adityapatel217/");
-//                       },
-
-//                       child: const Text(
-//                         "Get In Touch",
-//                         style: TextStyle(
-//                             color: Color(0xff48E1EC),
-//                             fontWeight: FontWeight.bold,
-//                             fontSize: 20.0),
-//                       ),
-//                     ),
-//                   ),
-//                   Text(
-//                     str,
-//                     style:
-//                         const TextStyle(fontSize: 20.0, color: Colors.white60),
-//                   ),
-//                 ],
-//               )
-//             ],
-//           ),
-//         ),
-//       ],
-//     );
-//   }
-//   Future<void> goToWebPage(String urlString) async {
-//     final Uri _url = Uri.parse(urlString);
-//     if (!await launchUrl(_url)) {
-//       throw 'Could not launch $_url';
-//     }
-//   }
-// }
-
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -228,7 +80,7 @@ class _IntroPageState extends State<IntroPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 20.0),
-              Text(
+              const Text(
                 'Hi There! I am,',
                 style: TextStyle(
                     color: Color.fromARGB(255, 255, 255, 255),
@@ -239,7 +91,7 @@ class _IntroPageState extends State<IntroPage> {
               Text(
                 'Aditya Patel',
                 style: TextStyle(
-                  color: Color(0xff48E1EC),
+                  color: const Color(0xff48E1EC),
                   fontWeight: FontWeight.bold,
                   // fontSize: 45.0,
                   fontSize: MediaQuery.of(context).size.width < 300 ? 30 : 45,
@@ -348,7 +200,7 @@ class _IntroPageState extends State<IntroPage> {
                         style: TextStyle(
                             color: Color(0xff48E1EC),
                             fontWeight: FontWeight.bold,
-                            fontSize: 20.0),
+                            fontSize: 18.0),
                       ),
                     ),
                   ),
@@ -378,7 +230,7 @@ class _IntroPageState extends State<IntroPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 50.0),
+              const SizedBox(height: 40.0),
               const Text(
                 'Hi There! I am,',
                 style: TextStyle(
@@ -429,31 +281,10 @@ class _IntroPageState extends State<IntroPage> {
                       ),
                     ),
                   ),
-                ],
-              ),
-              // const SizedBox(
-              //   height: 28.0,
-              //   width: 300,
-              //   //screen width get
-              // ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  SizedBox(
-                    // width: 300,
-                    height: 200,
-                  ),
-                  SizedBox(
-                    // width: 300,
-                    child: Padding(
-                      padding: const EdgeInsets.only(right: 60.0),
-                      child: Text(
-                        str,
-                        style: const TextStyle(
-                            fontSize: 20.0, color: Colors.white60),
-                      ),
-                    ),
+                  Text(
+                    str,
+                    style:
+                        const TextStyle(fontSize: 20.0, color: Colors.white60),
                   ),
                 ],
               ),
