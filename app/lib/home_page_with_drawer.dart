@@ -110,8 +110,7 @@ class _HomePageState extends State<HomePage> {
                                   child: Image(
                                     width: constraints.maxWidth * 0.04,
                                     height: constraints.maxWidth * 0.04,
-                                    image:
-                                        AssetImage("assests/dpiconround.png"),
+                                    image: AssetImage("assets/dpiconround.png"),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -137,8 +136,7 @@ class _HomePageState extends State<HomePage> {
                                   child: Image(
                                     width: constraints.maxWidth * 0.04,
                                     height: constraints.maxWidth * 0.04,
-                                    image:
-                                        AssetImage("assests/dpiconround.png"),
+                                    image: AssetImage("assets/dpiconround.png"),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -209,7 +207,7 @@ class _HomePageState extends State<HomePage> {
                     //             width: MediaQuery.of(context).size.width * 0.04,
                     //             height:
                     //                 MediaQuery.of(context).size.width * 0.04,
-                    //             image: AssetImage("assests/dpiconround.png"),
+                    //             image: AssetImage("assets/dpiconround.png"),
                     //             fit: BoxFit.cover,
                     //           ),
                     //         ),
@@ -285,7 +283,7 @@ class _HomePageState extends State<HomePage> {
                           //               width: MediaQuery.of(context).size.width * 0.03,
                           //               height:
                           //                   MediaQuery.of(context).size.width * 0.03,
-                          //               image: AssetImage("assests/facebook.png"),
+                          //               image: AssetImage("assets/facebook.png"),
                           //               fit: BoxFit.cover,
                           //             ),
                           //           ),
@@ -299,7 +297,7 @@ class _HomePageState extends State<HomePage> {
                           //               width: MediaQuery.of(context).size.width * 0.03,
                           //               height:
                           //                   MediaQuery.of(context).size.width * 0.03,
-                          //               image: AssetImage("assests/github.png"),
+                          //               image: AssetImage("assets/github.png"),
                           //               fit: BoxFit.cover,
                           //             ),
                           //           ),
@@ -313,7 +311,7 @@ class _HomePageState extends State<HomePage> {
                           //               width: MediaQuery.of(context).size.width * 0.03,
                           //               height:
                           //                   MediaQuery.of(context).size.width * 0.03,
-                          //               image: AssetImage("assests/hackerrank.png"),
+                          //               image: AssetImage("assets/hackerrank.png"),
                           //               fit: BoxFit.cover,
                           //             ),
                           //           ),
@@ -327,7 +325,7 @@ class _HomePageState extends State<HomePage> {
                           //               width: MediaQuery.of(context).size.width * 0.03,
                           //               height:
                           //                   MediaQuery.of(context).size.width * 0.03,
-                          //               image: AssetImage("assests/linkedin.png"),
+                          //               image: AssetImage("assets/linkedin.png"),
                           //               fit: BoxFit.cover,
                           //             ),
                           //           ),
@@ -371,7 +369,7 @@ class _HomePageState extends State<HomePage> {
                                   child: Image(
                                     width:
                                         MediaQuery.of(context).size.width * 0.8,
-                                    image: AssetImage("assests/banner.png"),
+                                    image: AssetImage("assets/banner.png"),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -506,7 +504,7 @@ class _HomePageState extends State<HomePage> {
 //             child: Image(
 //               width: MediaQuery.of(context).size.width * 0.04,
 //               height: MediaQuery.of(context).size.width * 0.04,
-//               image: AssetImage("assests/dpiconround.png"),
+//               image: AssetImage("assets/dpiconround.png"),
 //               fit: BoxFit.cover,
 //             ),
 //           ),
@@ -569,7 +567,7 @@ class _HomePageState extends State<HomePage> {
 //       padding: EdgeInsets.fromLTRB(50.0, 100.0, 50.0, 0.0),
 //       child: Image(
 //         width: MediaQuery.of(context).size.width * 0.8,
-//         image: AssetImage("assests/banner.png"),
+//         image: AssetImage("assets/banner.png"),
 //         fit: BoxFit.cover,
 //       ),
 //     );

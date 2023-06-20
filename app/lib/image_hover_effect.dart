@@ -45,7 +45,7 @@ class _ImageHoverEffectState extends State<ImageHoverEffect> {
                 : AssetImage(widget.image1),
             fit: BoxFit.cover,
           ),
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(100),
         ),
       ),
     );

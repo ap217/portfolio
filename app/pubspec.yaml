@@ -69,8 +69,8 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
-    - assests/
-    - assests/cube_model.obj
+    - assets/
+    - assets/cube_model.obj
 
     # - assets/your_animation.riv
 

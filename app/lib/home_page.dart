@@ -113,8 +113,7 @@ class _HomePageState extends State<HomePage> {
                                         MediaQuery.of(context).size.width < 200
                                             ? 20
                                             : 40,
-                                    image:
-                                        AssetImage("assests/dpiconround.png"),
+                                    image: AssetImage("assets/dpiconround.png"),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -182,7 +181,7 @@ class _HomePageState extends State<HomePage> {
                                           child: const Text(
                                             "Resume",
                                             style: TextStyle(
-                                              color: Colors.white,
+                                              color: Color(0xff0A192F),
                                               fontWeight: FontWeight.bold,
                                               fontSize: 18.0,
                                             ),
@@ -221,8 +220,7 @@ class _HomePageState extends State<HomePage> {
                                   child: Image(
                                     width: 50,
                                     height: 50,
-                                    image:
-                                        AssetImage("assests/dpiconround.png"),
+                                    image: AssetImage("assets/dpiconround.png"),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -264,7 +262,7 @@ class _HomePageState extends State<HomePage> {
                                     child: const Text(
                                       "Resume",
                                       style: TextStyle(
-                                        color: Colors.white,
+                                        color: Color(0xff0A192F),
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20.0,
                                       ),
@@ -318,7 +316,7 @@ class _HomePageState extends State<HomePage> {
                                 //   child: Image(
                                 //     width:
                                 //         MediaQuery.of(context).size.width * 0.8,
-                                //     image: AssetImage("assests/banner.png"),
+                                //     image: AssetImage("assets/banner.png"),
                                 //     fit: BoxFit.cover,
                                 //   ),
                                 // ),

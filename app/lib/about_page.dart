@@ -77,23 +77,23 @@ class _AboutPageState extends State<AboutPage> {
                   child: Row(
                     children: [
                       ImageHoverEffect(
-                        image1: "assests/facebook.png",
-                        image2: "assests/github.png",
+                        image1: "assets/cpp_normal.png",
+                        image2: "assets/cpp_mod.png",
                       ),
                       const SizedBox(width: 10.0),
                       ImageHoverEffect(
-                        image1: "assests/mypic.png",
-                        image2: "assests/mypic7.png",
+                        image1: "assets/fluttericon_normal.png",
+                        image2: "assets/fluttericon_mod.png",
                       ),
                       const SizedBox(width: 10.0),
                       ImageHoverEffect(
-                        image1: "assests/mypic7.png",
-                        image2: "assests/mypic8.png",
+                        image1: "assets/mypic7.png",
+                        image2: "assets/mypic8.png",
                       ),
                       const SizedBox(width: 10.0),
                       ImageHoverEffect(
-                        image1: "assests/hackerrank.png",
-                        image2: "assests/github.png",
+                        image1: "assets/hackerrank.png",
+                        image2: "assets/github.png",
                       ),
                     ],
                   ),
@@ -104,7 +104,7 @@ class _AboutPageState extends State<AboutPage> {
           Expanded(
             flex: 3,
             child: Image.asset(
-              "assests/mypic7.png",
+              "assets/mypic7.png",
               height: 600.0,
               fit: BoxFit.fitHeight,
             ),
@@ -129,7 +129,7 @@ class _AboutPageState extends State<AboutPage> {
           ),
           const SizedBox(height: 10.0),
           Image.asset(
-            "assests/mypic7.png",
+            "assets/mypic7.png",
             height: 400.0,
             fit: BoxFit.cover,
           ),
@@ -164,23 +164,23 @@ class _AboutPageState extends State<AboutPage> {
             child: Row(
               children: [
                 ImageHoverEffect(
-                  image1: "assests/facebook.png",
-                  image2: "assests/github.png",
+                  image1: "assets/facebook.png",
+                  image2: "assets/github.png",
                 ),
                 const SizedBox(width: 10.0),
                 ImageHoverEffect(
-                  image1: "assests/mypic.png",
-                  image2: "assests/mypic7.png",
+                  image1: "assets/mypic.png",
+                  image2: "assets/mypic7.png",
                 ),
                 const SizedBox(width: 10.0),
                 ImageHoverEffect(
-                  image1: "assests/mypic7.png",
-                  image2: "assests/mypic8.png",
+                  image1: "assets/mypic7.png",
+                  image2: "assets/mypic8.png",
                 ),
                 const SizedBox(width: 10.0),
                 ImageHoverEffect(
-                  image1: "assests/hackerrank.png",
-                  image2: "assests/github.png",
+                  image1: "assets/hackerrank.png",
+                  image2: "assets/github.png",
                 ),
               ],
             ),
@@ -206,7 +206,7 @@ class _AboutPageState extends State<AboutPage> {
           ),
           const SizedBox(height: 10.0),
           Image.asset(
-            "assests/mypic7.png",
+            "assets/mypic7.png",
             height: 300.0,
             fit: BoxFit.cover,
           ),
@@ -234,23 +234,23 @@ class _AboutPageState extends State<AboutPage> {
             child: Row(
               children: [
                 ImageHoverEffect(
-                  image1: "assests/facebook.png",
-                  image2: "assests/github.png",
+                  image1: "assets/facebook.png",
+                  image2: "assets/github.png",
                 ),
                 const SizedBox(width: 10.0),
                 ImageHoverEffect(
-                  image1: "assests/mypic.png",
-                  image2: "assests/mypic7.png",
+                  image1: "assets/mypic.png",
+                  image2: "assets/mypic7.png",
                 ),
                 const SizedBox(width: 10.0),
                 ImageHoverEffect(
-                  image1: "assests/mypic7.png",
-                  image2: "assests/mypic8.png",
+                  image1: "assets/mypic7.png",
+                  image2: "assets/mypic8.png",
                 ),
                 const SizedBox(width: 10.0),
                 ImageHoverEffect(
-                  image1: "assests/hackerrank.png",
-                  image2: "assests/github.png",
+                  image1: "assets/hackerrank.png",
+                  image2: "assets/github.png",
                 ),
               ],
             ),

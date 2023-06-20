@@ -34,7 +34,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                         : screenWidth >= 1100
                             ? 400
                             : 300,
-                    image: AssetImage("assests/${widget.imageurl}"),
+                    image: AssetImage("assets/${widget.imageurl}"),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -152,7 +152,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                   Center(
                     child: Image(
                       width: MediaQuery.of(context).size.width,
-                      image: AssetImage("assests/${widget.imageurl}"),
+                      image: AssetImage("assets/${widget.imageurl}"),
                       fit: BoxFit.fitWidth,
                     ),
                   ),
@@ -248,7 +248,7 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
                         : screenWidth >= 1100
                             ? 400
                             : 300,
-                    image: AssetImage("assests/${widget.imageurl}"),
+                    image: AssetImage("assets/${widget.imageurl}"),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -372,7 +372,7 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
                   Center(
                     child: Image(
                       width: MediaQuery.of(context).size.width,
-                      image: AssetImage("assests/${widget.imageurl}"),
+                      image: AssetImage("assets/${widget.imageurl}"),
                       fit: BoxFit.fitWidth,
                     ),
                   ),
