@@ -1,9 +1,11 @@
 import 'dart:async';
 import 'package:app/my_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'model/Method.dart';
 
+// import 'google_fonts.dart';
 class IntroPage extends StatefulWidget {
   @override
   _IntroPageState createState() => _IntroPageState();
@@ -86,25 +88,31 @@ class _IntroPageState extends State<IntroPage> {
                 style: TextStyle(
                     color: Color.fromARGB(255, 255, 255, 255),
                     fontWeight: FontWeight.bold,
-                    fontSize: 20.0),
+                    fontSize: 15.0),
               ),
               const SizedBox(height: 5.0),
               Text(
-                'Aditya Patel',
-                style: TextStyle(
+                style: GoogleFonts.dancingScript(
                   color: MyColors.clr2,
-                  fontWeight: FontWeight.bold,
-                  // fontSize: 45.0,
+                  fontWeight: FontWeight.w700,
+                  // fontSize: 140,
                   fontSize: MediaQuery.of(context).size.width < 300 ? 30 : 45,
                 ),
+                'Aditya Patel',
+                // style: TextStyle(
+                //   color: MyColors.clr2,
+                //   fontWeight: FontWeight.bold,
+                //   // fontSize: 45.0,
+                //   fontSize: MediaQuery.of(context).size.width < 300 ? 30 : 45,
+                // ),
               ),
               const SizedBox(height: 5.0),
               Text(
                 currentText,
                 style: const TextStyle(
                     color: MyColors.clrwhite54,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20.0),
+                    // fontWeight: FontWeight.bold,
+                    fontSize: 15.0),
               ),
               const SizedBox(height: 20.0),
               SizedBox(
@@ -159,23 +167,28 @@ class _IntroPageState extends State<IntroPage> {
                 style: TextStyle(
                     color: Color.fromARGB(255, 255, 255, 255),
                     fontWeight: FontWeight.bold,
-                    fontSize: 25.0),
+                    fontSize: 20.0),
               ),
               const SizedBox(height: 10.0),
-              const Text(
+              Text(
+                style: GoogleFonts.dancingScript(
+                  color: MyColors.clr2,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 65,
+                ),
                 'Aditya Patel',
-                style: TextStyle(
-                    color: MyColors.clr2,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 65.0),
+                // style: TextStyle(
+                //     color: MyColors.clr2,
+                //     fontWeight: FontWeight.bold,
+                //     fontSize: 65.0),
               ),
               const SizedBox(height: 10.0),
               Text(
                 currentText,
                 style: const TextStyle(
                     color: MyColors.clrwhite54,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 30.0),
+                    // fontWeight: FontWeight.bold,
+                    fontSize: 25.0),
               ),
               const SizedBox(height: 40.0),
               Row(
@@ -237,23 +250,29 @@ class _IntroPageState extends State<IntroPage> {
                 style: TextStyle(
                     color: Color.fromARGB(255, 255, 255, 255),
                     fontWeight: FontWeight.bold,
-                    fontSize: 25.0),
+                    fontSize: 35.0),
               ),
               const SizedBox(height: 5.0),
-              const Text(
+              Text(
+                style: GoogleFonts.dancingScript(
+                  color: MyColors.clr2,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 140,
+                ),
                 'Aditya Patel',
-                style: TextStyle(
-                    color: MyColors.clr2,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 95.0),
+
+                // style: TextStyle(
+                //     color: MyColors.clr2,
+                //     fontWeight: FontWeight.bold,
+                //     fontSize: 95.0),
               ),
               const SizedBox(height: 5.0),
               Text(
                 currentText,
                 style: const TextStyle(
                     color: MyColors.clrwhite54,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 40.0),
+                    // fontWeight: FontWeight.bold,
+                    fontSize: 30.0),
               ),
               const SizedBox(height: 50.0),
               Row(

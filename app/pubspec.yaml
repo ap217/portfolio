@@ -41,6 +41,7 @@ dependencies:
   object_3d: ^0.0.1
   flutter_cube: ^0.1.1
   scroll_to_index: ^3.0.1
+  google_fonts: ^5.1.0
 
 dev_dependencies:
   flutter_test:
