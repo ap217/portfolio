@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'my_colors.dart';
+
 class HoverTextButton extends StatefulWidget {
   final VoidCallback onPressed;
   final String text;
@@ -37,7 +39,7 @@ class _HoverTextButtonState extends State<HoverTextButton> {
               vertical: 18.0)),
           side: isHovered
               ? MaterialStateProperty.all<BorderSide>(
-                  const BorderSide(color: Color(0xff48E1EC), width: 1.0),
+                  BorderSide(color: MyColors.clr2, width: 1.0),
                 )
               : MaterialStateProperty.all<BorderSide>(BorderSide.none),
           shape: MaterialStateProperty.all<OutlinedBorder>(
@@ -52,7 +54,7 @@ class _HoverTextButtonState extends State<HoverTextButton> {
           style: const TextStyle(
               fontSize: 20.0,
               letterSpacing: 2.0,
-              color: Colors.white,
+              color: MyColors.clrwhite,
               fontWeight: FontWeight.bold),
         ),
       ),

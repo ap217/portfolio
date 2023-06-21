@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'model/Method.dart';
+import 'my_colors.dart';
 
 class FooterPage extends StatefulWidget {
   @override
@@ -36,7 +37,7 @@ class _FooterPageState extends State<FooterPage> {
                 Text(
                   'Whats Next ?',
                   style: TextStyle(
-                    color: Color(0xff48E1EC),
+                    color: MyColors.clr2,
                     fontSize: MediaQuery.of(context).size.width < 480 ? 25 : 35,
                   ),
                 ),
@@ -47,7 +48,7 @@ class _FooterPageState extends State<FooterPage> {
                   child: Text(
                     'Get In Touch',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: MyColors.clrwhite,
                       fontWeight: FontWeight.bold,
                       fontSize:
                           MediaQuery.of(context).size.width < 480 ? 40 : 65,
@@ -61,7 +62,8 @@ class _FooterPageState extends State<FooterPage> {
                     width: 600,
                     child: Text(
                       str,
-                      style: TextStyle(color: Colors.white54, fontSize: 20.0),
+                      style:
+                          TextStyle(color: MyColors.clrwhite54, fontSize: 20.0),
                       textAlign: TextAlign.center,
                     )),
                 const SizedBox(
@@ -72,13 +74,13 @@ class _FooterPageState extends State<FooterPage> {
                   width: 200,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Color(0xff0A192F),
-                      onPrimary: Color(0xff48E1EC),
+                      primary: MyColors.clr1,
+                      onPrimary: MyColors.clr2,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(32.0),
                       ),
                     ),
-                    // color: Color(0xff0A192F),
+                    // color: MyColors.clr1,
                     onPressed: () async {
                       await goToWebPage(
                           "https://www.linkedin.com/in/adityapatel217/");
@@ -86,7 +88,7 @@ class _FooterPageState extends State<FooterPage> {
                     child: const Text(
                       "Get In Touch",
                       style: TextStyle(
-                          color: Color(0xff48E1EC),
+                          color: MyColors.clr2,
                           fontWeight: FontWeight.bold,
                           fontSize: 20.0),
                     ),
@@ -124,7 +126,8 @@ class _FooterPageState extends State<FooterPage> {
                 const SizedBox(
                   height: 20,
                   child: Text("© 2023 Aditya Patel. All rights reserved.",
-                      style: TextStyle(color: Colors.white54, fontSize: 15.0)),
+                      style: TextStyle(
+                          color: MyColors.clrwhite54, fontSize: 15.0)),
                 ),
                 const SizedBox(
                   height: 30,
@@ -179,7 +182,7 @@ class _SocialMediaIconButtonState extends State<SocialMediaIconButton> {
           size: 25.0,
           color: _isHovered
               ? const Color.fromARGB(255, 255, 255, 255)
-              : Color(0xff48E1EC),
+              : MyColors.clr2,
         ),
         onPressed: () async {
           await goToWebPage(url);

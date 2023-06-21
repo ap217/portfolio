@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'my_colors.dart';
 import 'project_widget.dart';
 
 class ProjectPage extends StatefulWidget {
@@ -20,7 +21,7 @@ class _ProjectPageState extends State<ProjectPage> {
           const Text(
             'My Projects',
             style: TextStyle(
-                color: Color(0xff48E1EC),
+                color: MyColors.clr2,
                 fontWeight: FontWeight.bold,
                 fontSize: 45.0),
           ),

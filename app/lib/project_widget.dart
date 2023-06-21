@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'my_colors.dart';
+
 class ProjectWidget extends StatefulWidget {
   final String imageurl, tech, desc, title;
   ProjectWidget(this.desc, this.imageurl, this.tech, this.title);
@@ -50,7 +52,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                           child: Text(
                             widget.title,
                             style: const TextStyle(
-                              color: Colors.white,
+                              color: MyColors.clrwhite,
                               fontWeight: FontWeight.bold,
                               fontSize: 45.0,
                             ),
@@ -72,7 +74,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                                   blurRadius: 5.0,
                                 ),
                               ],
-                              color: Color(0xff172943),
+                              color: MyColors.clr3,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)),
                             ),
@@ -82,7 +84,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                                 child: Text(
                                   widget.desc,
                                   style: const TextStyle(
-                                    color: Colors.white,
+                                    color: MyColors.clrwhite,
                                     fontSize: 20.0,
                                   ),
                                 ),
@@ -105,7 +107,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                                   blurRadius: 5.0,
                                 ),
                               ],
-                              color: Color(0xff172943),
+                              color: MyColors.clr3,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)),
                             ),
@@ -115,7 +117,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                                 child: Text(
                                   widget.tech,
                                   style: const TextStyle(
-                                    color: Color(0xff48E1EC),
+                                    color: MyColors.clr2,
                                     fontSize: 20.0,
                                   ),
                                 ),
@@ -139,13 +141,13 @@ class _ProjectWidgetState extends State<ProjectWidget> {
           Container(
             padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
             decoration: BoxDecoration(
-              border: Border.all(color: Color(0xff48E1EC)),
+              border: Border.all(color: MyColors.clr2),
               borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
             width: MediaQuery.of(context).size.width -
                 MediaQuery.of(context).size.width * 0.2,
             child: Card(
-              color: Color(0xff0A192F),
+              color: MyColors.clr1,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -160,7 +162,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                   Text(
                     widget.title,
                     style: TextStyle(
-                      color: Colors.white,
+                      color: MyColors.clrwhite,
                       fontWeight: FontWeight.bold,
                       fontSize: MediaQuery.of(context).size.width >= 770
                           ? 35
@@ -173,7 +175,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                   Text(
                     widget.tech,
                     style: TextStyle(
-                      color: Color(0xff48E1EC),
+                      color: MyColors.clr2,
                       fontSize: MediaQuery.of(context).size.width >= 770
                           ? 20
                           : MediaQuery.of(context).size.width >= 530
@@ -185,7 +187,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                   Text(
                     widget.desc,
                     style: TextStyle(
-                      color: Colors.white,
+                      color: MyColors.clrwhite,
                       fontSize: MediaQuery.of(context).size.width >= 770
                           ? 20
                           : MediaQuery.of(context).size.width >= 530
@@ -224,7 +226,7 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
           //   child: Text(
           //     widget.title,
           //     style: const TextStyle(
-          //       color: Colors.white,
+          //       color: MyColors.clrwhite,
           //       fontWeight: FontWeight.bold,
           //       fontSize: 45.0,
           //     ),
@@ -264,7 +266,7 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
                           child: Text(
                             widget.title,
                             style: const TextStyle(
-                              color: Colors.white,
+                              color: MyColors.clrwhite,
                               fontWeight: FontWeight.bold,
                               fontSize: 45.0,
                             ),
@@ -286,7 +288,7 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
                                   blurRadius: 5.0,
                                 ),
                               ],
-                              color: Color(0xff172943),
+                              color: MyColors.clr3,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)),
                             ),
@@ -296,7 +298,7 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
                               child: Text(
                                 widget.desc,
                                 style: const TextStyle(
-                                  color: Colors.white,
+                                  color: MyColors.clrwhite,
                                   fontSize: 20.0,
                                 ),
                               ),
@@ -318,7 +320,7 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
                                   blurRadius: 5.0,
                                 ),
                               ],
-                              color: Color(0xff172943),
+                              color: MyColors.clr3,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)),
                             ),
@@ -328,7 +330,7 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
                                 child: Text(
                                   widget.tech,
                                   style: const TextStyle(
-                                    color: Color(0xff48E1EC),
+                                    color: MyColors.clr2,
                                     fontSize: 20.0,
                                   ),
                                 ),
@@ -358,14 +360,14 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
               //   //   blurRadius: 30.0,
               //   // ),
               // ],
-              // color: Color(0xff172943),
-              border: Border.all(color: Color(0xff48E1EC)),
+              // color: MyColors.clr3,
+              border: Border.all(color: MyColors.clr2),
               borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
             width: MediaQuery.of(context).size.width -
                 MediaQuery.of(context).size.width * 0.2,
             child: Card(
-              color: Color(0xff0A192F),
+              color: MyColors.clr1,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -380,7 +382,7 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
                   Text(
                     widget.title,
                     style: TextStyle(
-                      color: Colors.white,
+                      color: MyColors.clrwhite,
                       fontWeight: FontWeight.bold,
                       fontSize: MediaQuery.of(context).size.width >= 770
                           ? 35
@@ -393,7 +395,7 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
                   Text(
                     widget.tech,
                     style: TextStyle(
-                      color: Color(0xff48E1EC),
+                      color: MyColors.clr2,
                       fontSize: MediaQuery.of(context).size.width >= 770
                           ? 20
                           : MediaQuery.of(context).size.width >= 530
@@ -405,7 +407,7 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
                   Text(
                     widget.desc,
                     style: TextStyle(
-                      color: Colors.white,
+                      color: MyColors.clrwhite,
                       fontSize: MediaQuery.of(context).size.width >= 770
                           ? 20
                           : MediaQuery.of(context).size.width >= 530

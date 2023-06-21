@@ -8,6 +8,7 @@ import 'appbar_button.dart';
 import 'footer_page.dart';
 import 'intro_page.dart';
 import 'model/Method.dart';
+import 'my_colors.dart';
 
 class HomePage extends StatefulWidget {
   final AutoScrollController _scrollController = AutoScrollController();
@@ -77,7 +78,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: const Color(0xff0A192F),
+      backgroundColor: MyColors.clr1,
       body: Scrollbar(
         child: SingleChildScrollView(
           controller: _scrollController,
@@ -122,14 +123,14 @@ class _HomePageState extends State<HomePage> {
                                   color: const Color.fromARGB(255, 19, 38, 67),
                                   icon: const Icon(
                                     Icons.more_vert,
-                                    color: Color(0xff48E1EC),
+                                    color: MyColors.clr2,
                                   ),
                                   itemBuilder: (context) => [
                                     const PopupMenuItem(
                                       value: 'home',
                                       child: Text('Home',
                                           style: TextStyle(
-                                            color: Colors.white,
+                                            color: MyColors.clrwhite,
                                             fontSize: 18,
                                           )),
                                     ),
@@ -137,7 +138,7 @@ class _HomePageState extends State<HomePage> {
                                       value: 'about',
                                       child: Text('About',
                                           style: TextStyle(
-                                            color: Colors.white,
+                                            color: MyColors.clrwhite,
                                             fontSize: 18,
                                           )),
                                     ),
@@ -145,7 +146,7 @@ class _HomePageState extends State<HomePage> {
                                       value: 'projects',
                                       child: Text('Projects',
                                           style: TextStyle(
-                                            color: Colors.white,
+                                            color: MyColors.clrwhite,
                                             fontSize: 18,
                                           )),
                                     ),
@@ -153,7 +154,7 @@ class _HomePageState extends State<HomePage> {
                                       value: 'contact',
                                       child: Text('Contact',
                                           style: TextStyle(
-                                            color: Colors.white,
+                                            color: MyColors.clrwhite,
                                             fontSize: 18,
                                           )),
                                     ),
@@ -164,14 +165,14 @@ class _HomePageState extends State<HomePage> {
                                         width: 100,
                                         child: TextButton(
                                           style: TextButton.styleFrom(
-                                            // primary: Colors.white,
-                                            backgroundColor: Color(0xff48E1EC),
+                                            // primary: MyColors.clrwhite,
+                                            backgroundColor: MyColors.clr2,
                                             // onSurface: Colors.grey,
                                             shape: RoundedRectangleBorder(
                                               borderRadius:
                                                   BorderRadius.circular(6.0),
                                               side: BorderSide(
-                                                  color: Color(0xff48E1EC)),
+                                                  color: MyColors.clr2),
                                             ),
                                           ),
                                           onPressed: () async {
@@ -181,7 +182,7 @@ class _HomePageState extends State<HomePage> {
                                           child: const Text(
                                             "Resume",
                                             style: TextStyle(
-                                              color: Color(0xff0A192F),
+                                              color: MyColors.clr1,
                                               fontWeight: FontWeight.bold,
                                               fontSize: 18.0,
                                             ),
@@ -247,12 +248,11 @@ class _HomePageState extends State<HomePage> {
                                   width: 120,
                                   child: TextButton(
                                     style: TextButton.styleFrom(
-                                      backgroundColor: const Color(0xff48E1EC),
+                                      backgroundColor: MyColors.clr2,
                                       shape: RoundedRectangleBorder(
                                         borderRadius:
                                             BorderRadius.circular(6.0),
-                                        side: const BorderSide(
-                                            color: Color(0xff48E1EC)),
+                                        side: BorderSide(color: MyColors.clr2),
                                       ),
                                     ),
                                     onPressed: () async {
@@ -262,7 +262,7 @@ class _HomePageState extends State<HomePage> {
                                     child: const Text(
                                       "Resume",
                                       style: TextStyle(
-                                        color: Color(0xff0A192F),
+                                        color: MyColors.clr1,
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20.0,
                                       ),
@@ -305,7 +305,7 @@ class _HomePageState extends State<HomePage> {
                                 //   child: const Text(
                                 //     'Other Projects',
                                 //     style: TextStyle(
-                                //         color: Color(0xff48E1EC),
+                                //         color: MyColors.clr2,
                                 //         fontWeight: FontWeight.bold,
                                 //         fontSize: 45.0),
                                 //   ),
@@ -353,7 +353,7 @@ class _HomePageState extends State<HomePage> {
           child: FloatingActionButton(
             onPressed: () => scrollToTop(),
             hoverColor: Color.fromARGB(255, 31, 54, 87),
-            backgroundColor: Color(0xff172943),
+            backgroundColor: MyColors.clr3,
             child: Icon(Icons.arrow_upward),
           ),
         ),

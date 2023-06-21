@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'image_hover_effect.dart';
+import 'my_colors.dart';
 
 class AboutPage extends StatefulWidget {
   @override
@@ -44,10 +45,10 @@ class _AboutPageState extends State<AboutPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                Text(
                   'About Me',
                   style: TextStyle(
-                    color: Color(0xff48E1EC),
+                    color: MyColors.clr2,
                     fontWeight: FontWeight.bold,
                     fontSize: 45.0,
                   ),
@@ -66,7 +67,7 @@ class _AboutPageState extends State<AboutPage> {
                 const Text(
                   'Skills',
                   style: TextStyle(
-                    color: Color(0xff48E1EC),
+                    color: MyColors.clr2,
                     fontWeight: FontWeight.bold,
                     fontSize: 45.0,
                   ),
@@ -122,7 +123,7 @@ class _AboutPageState extends State<AboutPage> {
           const Text(
             'About Me',
             style: TextStyle(
-              color: Color(0xff48E1EC),
+              color: MyColors.clr2,
               fontWeight: FontWeight.bold,
               fontSize: 35.0,
             ),
@@ -153,7 +154,7 @@ class _AboutPageState extends State<AboutPage> {
           const Text(
             'Skills',
             style: TextStyle(
-              color: Color(0xff48E1EC),
+              color: MyColors.clr2,
               fontWeight: FontWeight.bold,
               fontSize: 35.0,
             ),
@@ -199,7 +200,7 @@ class _AboutPageState extends State<AboutPage> {
           const Text(
             'About Me',
             style: TextStyle(
-              color: Color(0xff48E1EC),
+              color: MyColors.clr2,
               fontWeight: FontWeight.bold,
               fontSize: 30.0,
             ),
@@ -223,7 +224,7 @@ class _AboutPageState extends State<AboutPage> {
           const Text(
             'Skills',
             style: TextStyle(
-              color: Color(0xff48E1EC),
+              color: MyColors.clr2,
               fontWeight: FontWeight.bold,
               fontSize: 30.0,
             ),

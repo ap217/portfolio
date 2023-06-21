@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'my_colors.dart';
+
 class AppBarTitle extends StatelessWidget {
   final String text;
 
@@ -20,7 +22,7 @@ class AppBarTitle extends StatelessWidget {
           style: TextStyle(
               fontSize: 20.0,
               letterSpacing: 3.0,
-              color: Colors.white,
+              color: MyColors.clrwhite,
               fontWeight: FontWeight.bold),
         ),
       ),

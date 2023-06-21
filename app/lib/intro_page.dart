@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:app/my_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'model/Method.dart';
@@ -91,7 +92,7 @@ class _IntroPageState extends State<IntroPage> {
               Text(
                 'Aditya Patel',
                 style: TextStyle(
-                  color: const Color(0xff48E1EC),
+                  color: MyColors.clr2,
                   fontWeight: FontWeight.bold,
                   // fontSize: 45.0,
                   fontSize: MediaQuery.of(context).size.width < 300 ? 30 : 45,
@@ -101,7 +102,7 @@ class _IntroPageState extends State<IntroPage> {
               Text(
                 currentText,
                 style: const TextStyle(
-                    color: Colors.white54,
+                    color: MyColors.clrwhite54,
                     fontWeight: FontWeight.bold,
                     fontSize: 20.0),
               ),
@@ -112,11 +113,11 @@ class _IntroPageState extends State<IntroPage> {
                 // width: double.infinity,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xff0A192F),
-                    onPrimary: Color(0xff48E1EC),
+                    primary: MyColors.clr1,
+                    onPrimary: MyColors.clr2,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(6.0),
-                      side: const BorderSide(color: Color(0xff48E1EC)),
+                      side: BorderSide(color: MyColors.clr2),
                     ),
                   ),
                   onPressed: () async {
@@ -125,7 +126,7 @@ class _IntroPageState extends State<IntroPage> {
                   child: const Text(
                     "Get In Touch",
                     style: TextStyle(
-                      color: Color(0xff48E1EC),
+                      color: MyColors.clr2,
                       fontWeight: FontWeight.bold,
                       fontSize: 16.0,
                     ),
@@ -164,7 +165,7 @@ class _IntroPageState extends State<IntroPage> {
               const Text(
                 'Aditya Patel',
                 style: TextStyle(
-                    color: Color(0xff48E1EC),
+                    color: MyColors.clr2,
                     fontWeight: FontWeight.bold,
                     fontSize: 65.0),
               ),
@@ -172,7 +173,7 @@ class _IntroPageState extends State<IntroPage> {
               Text(
                 currentText,
                 style: const TextStyle(
-                    color: Colors.white54,
+                    color: MyColors.clrwhite54,
                     fontWeight: FontWeight.bold,
                     fontSize: 30.0),
               ),
@@ -185,11 +186,11 @@ class _IntroPageState extends State<IntroPage> {
                     width: 150,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xff0A192F),
-                        onPrimary: Color(0xff48E1EC),
+                        primary: MyColors.clr1,
+                        onPrimary: MyColors.clr2,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(6.0),
-                          side: const BorderSide(color: Color(0xff48E1EC)),
+                          side: BorderSide(color: MyColors.clr2),
                         ),
                       ),
                       onPressed: () async {
@@ -198,7 +199,7 @@ class _IntroPageState extends State<IntroPage> {
                       child: const Text(
                         "Get In Touch",
                         style: TextStyle(
-                            color: Color(0xff48E1EC),
+                            color: MyColors.clr2,
                             fontWeight: FontWeight.bold,
                             fontSize: 18.0),
                       ),
@@ -242,7 +243,7 @@ class _IntroPageState extends State<IntroPage> {
               const Text(
                 'Aditya Patel',
                 style: TextStyle(
-                    color: Color(0xff48E1EC),
+                    color: MyColors.clr2,
                     fontWeight: FontWeight.bold,
                     fontSize: 95.0),
               ),
@@ -250,7 +251,7 @@ class _IntroPageState extends State<IntroPage> {
               Text(
                 currentText,
                 style: const TextStyle(
-                    color: Colors.white54,
+                    color: MyColors.clrwhite54,
                     fontWeight: FontWeight.bold,
                     fontSize: 40.0),
               ),
@@ -263,11 +264,11 @@ class _IntroPageState extends State<IntroPage> {
                     width: 200,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xff0A192F),
-                        onPrimary: Color(0xff48E1EC),
+                        primary: MyColors.clr1,
+                        onPrimary: MyColors.clr2,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(6.0),
-                            side: const BorderSide(color: Color(0xff48E1EC))),
+                            side: BorderSide(color: MyColors.clr2)),
                       ),
                       onPressed: () async {
                         await goToWebPage("https://www.linkedin.com");
@@ -275,7 +276,7 @@ class _IntroPageState extends State<IntroPage> {
                       child: const Text(
                         "Get In Touch",
                         style: TextStyle(
-                            color: Color(0xff48E1EC),
+                            color: MyColors.clr2,
                             fontWeight: FontWeight.bold,
                             fontSize: 20.0),
                       ),

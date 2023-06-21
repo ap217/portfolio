@@ -16,6 +16,7 @@ import 'intro_page.dart';
 // import 'main.dart';
 import 'model/Method.dart';
 // import 'project_page.dart';
+import 'my_colors.dart';
 import 'project_widget.dart';
 
 // ignore: avoid_web_libraries_in_flutter
@@ -85,7 +86,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff0A192F),
+      backgroundColor: MyColors.clr1,
       body: Scrollbar(
         child: SingleChildScrollView(
           child: Column(
@@ -163,14 +164,13 @@ class _HomePageState extends State<HomePage> {
                                   width: 120,
                                   child: TextButton(
                                     style: TextButton.styleFrom(
-                                      // primary: Colors.white,
-                                      backgroundColor: Color(0xff48E1EC),
+                                      // primary: MyColors.clrwhite,
+                                      backgroundColor: MyColors.clr2,
                                       // onSurface: Colors.grey,
                                       shape: RoundedRectangleBorder(
                                         borderRadius:
                                             BorderRadius.circular(6.0),
-                                        side: BorderSide(
-                                            color: Color(0xff48E1EC)),
+                                        side: BorderSide(color: MyColors.clr2),
                                       ),
                                     ),
                                     onPressed: () async {
@@ -180,7 +180,7 @@ class _HomePageState extends State<HomePage> {
                                     child: const Text(
                                       "Resume",
                                       style: TextStyle(
-                                        color: Colors.white,
+                                        color: MyColors.clrwhite,
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20.0,
                                       ),
@@ -234,13 +234,13 @@ class _HomePageState extends State<HomePage> {
                     //           width: 120,
                     //           child: TextButton(
                     //             style: TextButton.styleFrom(
-                    //               // primary: Colors.white,
-                    //               backgroundColor: Color(0xff48E1EC),
+                    //               // primary: MyColors.clrwhite,
+                    //               backgroundColor: MyColors.clr2,
                     //               // onSurface: Colors.grey,
                     //               shape: RoundedRectangleBorder(
                     //                   borderRadius: BorderRadius.circular(6.0),
                     //                   side:
-                    //                       BorderSide(color: Color(0xff48E1EC))),
+                    //                       BorderSide(color: MyColors.clr2)),
                     //             ),
                     //             onPressed: () async {
                     //               await goToWebPage(
@@ -249,7 +249,7 @@ class _HomePageState extends State<HomePage> {
                     //             child: const Text(
                     //               "Resume",
                     //               style: TextStyle(
-                    //                   color: Colors.white,
+                    //                   color: MyColors.clrwhite,
                     //                   fontWeight: FontWeight.bold,
                     //                   fontSize: 20.0),
                     //             ),
@@ -358,7 +358,7 @@ class _HomePageState extends State<HomePage> {
                                   child: const Text(
                                     'Other Projects',
                                     style: TextStyle(
-                                        color: Color(0xff48E1EC),
+                                        color: MyColors.clr2,
                                         fontWeight: FontWeight.bold,
                                         fontSize: 45.0),
                                   ),
@@ -466,7 +466,7 @@ class _HomePageState extends State<HomePage> {
 //   @override
 //   Widget build(BuildContext context) {
 //     return Scaffold(
-//       backgroundColor: Color(0xff0A192F),
+//       backgroundColor: MyColors.clr1,
 //       body: Container(
 //         child: Column(
 //           children: [
@@ -519,17 +519,17 @@ class _HomePageState extends State<HomePage> {
 //             width: 120,
 //             child: TextButton(
 //               style: TextButton.styleFrom(
-//                 backgroundColor: Color(0xff48E1EC),
+//                 backgroundColor: MyColors.clr2,
 //                 shape: RoundedRectangleBorder(
 //                   borderRadius: BorderRadius.circular(6.0),
-//                   side: BorderSide(color: Color(0xff48E1EC)),
+//                   side: BorderSide(color: MyColors.clr2),
 //                 ),
 //               ),
 //               onPressed: () {},
 //               child: const Text(
 //                 "Resume",
 //                 style: TextStyle(
-//                   color: Colors.white,
+//                   color: MyColors.clrwhite,
 //                   fontWeight: FontWeight.bold,
 //                   fontSize: 20.0,
 //                 ),
@@ -551,7 +551,7 @@ class _HomePageState extends State<HomePage> {
 //       child: const Text(
 //         'Other Projects',
 //         style: TextStyle(
-//           color: Color(0xff48E1EC),
+//           color: MyColors.clr2,
 //           fontWeight: FontWeight.bold,
 //           fontSize: 30.0,
 //         ),
