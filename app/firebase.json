@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "aditya-portfolio-217",
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

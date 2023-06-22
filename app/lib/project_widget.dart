@@ -96,7 +96,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                           left: 150,
                           child: Container(
                             width: screenWidth * 0.33,
-                            padding: EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(8.0),
                             decoration: const BoxDecoration(
                               boxShadow: [
                                 BoxShadow(
@@ -108,7 +108,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)),
                             ),
-                            child: Center(
+                            child: Container(
                               child: Padding(
                                 padding: const EdgeInsets.all(18.0),
                                 child: Text(
@@ -360,7 +360,7 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)),
                             ),
-                            child: Center(
+                            child: Container(
                                 child: Padding(
                               padding: const EdgeInsets.all(18.0),
                               child: Text(

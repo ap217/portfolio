@@ -21,7 +21,7 @@ class _FooterPageState extends State<FooterPage> {
   Widget build(BuildContext context) {
     Method method = new Method();
     String str =
-        "Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem Ipsum has been.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum";
+        "Get in touch with me today to discuss your next project or collaboration. Whether you have an exciting idea you'd like to bring to life or need assistance with your existing software, I'm here to help. Feel free to reach out via the contact details below, and let's turn your vision into reality together.";
     return Container(
       child: Column(
         children: [

@@ -55,8 +55,7 @@ class _IntroPageState extends State<IntroPage> {
   @override
   Widget build(BuildContext context) {
     Method method = new Method();
-    String str =
-        "Student Developer Who Exploring New Things In Dev Part Of IT World";
+    String str = "Student Developer Who Exploring New Things In Dev World";
     return LayoutBuilder(
       builder: (context, constraints) {
         final double screenWidth = constraints.maxWidth;

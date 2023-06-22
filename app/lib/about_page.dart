@@ -13,8 +13,7 @@ class _AboutPageState extends State<AboutPage> {
   Widget build(BuildContext context) {
     String str = "I Am Aditya Patel, Student Developer";
     String str2 =
-        "Experienced Android Developer with a demonstrated history of working in the computer software industry. Skilled in Loyalty Programs, Mobile Applications, Java, and last my most favourite flutter framework (builded over more than 15 projects on it). Strong engineering professional with a High School Diploma focused in Information Technology from Vidyalankar Group of Educational Institutes. ";
-
+        "I have developed Apps and Websites using Flutter; some project demos are shown below; I'm a student at Dhirubhai Ambani Institute of Communication and Technology (DAIICT), Gandhinagar. I'm pursuing ICT. Currently, I'm in 3rd year(2022-2023). I am focused on Development and DSA.";
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         // Determine the screen width to define responsive behavior
@@ -45,7 +44,7 @@ class _AboutPageState extends State<AboutPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   'About Me',
                   style: TextStyle(
                     color: MyColors.clr2,
@@ -56,12 +55,19 @@ class _AboutPageState extends State<AboutPage> {
                 const SizedBox(height: 20.0),
                 Text(
                   str,
-                  style: TextStyle(fontSize: 23.0, color: Colors.white70),
+                  style: TextStyle(
+                      fontSize: 23.0,
+                      color: Colors.white70,
+                      letterSpacing: .4,
+                      height: 1.5),
                 ),
                 const SizedBox(height: 25.0),
                 Text(
                   str2,
-                  style: TextStyle(fontSize: 23.0, color: Colors.white70),
+                  style: TextStyle(
+                      fontSize: 23.0,
+                      color: Colors.white70,
+                      letterSpacing: 0.4),
                 ),
                 const SizedBox(height: 40.0),
                 const Text(
@@ -86,16 +92,16 @@ class _AboutPageState extends State<AboutPage> {
                         image1: "assets/fluttericon_normal.png",
                         image2: "assets/fluttericon_mod.png",
                       ),
-                      const SizedBox(width: 10.0),
-                      ImageHoverEffect(
-                        image1: "assets/mypic7.png",
-                        image2: "assets/mypic8.png",
-                      ),
-                      const SizedBox(width: 10.0),
-                      ImageHoverEffect(
-                        image1: "assets/hackerrank.png",
-                        image2: "assets/github.png",
-                      ),
+                      // const SizedBox(width: 10.0),
+                      // ImageHoverEffect(
+                      //   image1: "assets/mypic7.png",
+                      //   image2: "assets/mypic8.png",
+                      // ),
+                      // const SizedBox(width: 10.0),
+                      // ImageHoverEffect(
+                      //   image1: "assets/hackerrank.png",
+                      //   image2: "assets/github.png",
+                      // ),
                     ],
                   ),
                 ),
@@ -165,24 +171,24 @@ class _AboutPageState extends State<AboutPage> {
             child: Row(
               children: [
                 ImageHoverEffect(
-                  image1: "assets/facebook.png",
-                  image2: "assets/github.png",
+                  image1: "assets/cpp_normal.png",
+                  image2: "assets/cpp_mod.png",
                 ),
                 const SizedBox(width: 10.0),
                 ImageHoverEffect(
-                  image1: "assets/mypic.png",
-                  image2: "assets/mypic7.png",
+                  image1: "assets/fluttericon_normal.png",
+                  image2: "assets/fluttericon_mod.png",
                 ),
-                const SizedBox(width: 10.0),
-                ImageHoverEffect(
-                  image1: "assets/mypic7.png",
-                  image2: "assets/mypic8.png",
-                ),
-                const SizedBox(width: 10.0),
-                ImageHoverEffect(
-                  image1: "assets/hackerrank.png",
-                  image2: "assets/github.png",
-                ),
+                // const SizedBox(width: 10.0),
+                // ImageHoverEffect(
+                //   image1: "assets/mypic7.png",
+                //   image2: "assets/mypic8.png",
+                // ),
+                // const SizedBox(width: 10.0),
+                // ImageHoverEffect(
+                //   image1: "assets/hackerrank.png",
+                //   image2: "assets/github.png",
+                // ),
               ],
             ),
           ),
@@ -235,24 +241,24 @@ class _AboutPageState extends State<AboutPage> {
             child: Row(
               children: [
                 ImageHoverEffect(
-                  image1: "assets/facebook.png",
-                  image2: "assets/github.png",
+                  image1: "assets/cpp_normal.png",
+                  image2: "assets/cpp_mod.png",
                 ),
                 const SizedBox(width: 10.0),
                 ImageHoverEffect(
-                  image1: "assets/mypic.png",
-                  image2: "assets/mypic7.png",
+                  image1: "assets/fluttericon_normal.png",
+                  image2: "assets/fluttericon_mod.png",
                 ),
-                const SizedBox(width: 10.0),
-                ImageHoverEffect(
-                  image1: "assets/mypic7.png",
-                  image2: "assets/mypic8.png",
-                ),
-                const SizedBox(width: 10.0),
-                ImageHoverEffect(
-                  image1: "assets/hackerrank.png",
-                  image2: "assets/github.png",
-                ),
+                // const SizedBox(width: 10.0),
+                // ImageHoverEffect(
+                //   image1: "assets/mypic7.png",
+                //   image2: "assets/mypic8.png",
+                // ),
+                // const SizedBox(width: 10.0),
+                // ImageHoverEffect(
+                //   image1: "assets/hackerrank.png",
+                //   image2: "assets/github.png",
+                // ),
               ],
             ),
           ),
