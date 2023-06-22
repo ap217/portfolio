@@ -11,7 +11,7 @@ class AboutPage extends StatefulWidget {
 class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
-    String str = "I Am Aditya Patel, Student Developer";
+    String str = "I Am Aditya Patel, Student Developer.";
     String str2 =
         "I have developed Apps and Websites using Flutter; some project demos are shown below; I'm a student at Dhirubhai Ambani Institute of Communication and Technology (DAIICT), Gandhinagar. I'm pursuing ICT. Currently, I'm in 3rd year(2022-2023). I am focused on Development and DSA.";
     return LayoutBuilder(
