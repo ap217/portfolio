@@ -175,7 +175,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                     onPressed: () async {
                                       await goToWebPage(
-                                          "https://drive.google.com/file/d/1w368A72oT7nIKB9ZGsE1lsiDEKNwPYtT/view?usp=drive_link.pdf");
+                                          "https://www.linkedin.com/in/adityapatel217/");
                                     },
                                     child: const Text(
                                       "Resume",

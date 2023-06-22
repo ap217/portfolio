@@ -74,8 +74,9 @@ class _FooterPageState extends State<FooterPage> {
                   width: 200,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: MyColors.clr1,
-                      onPrimary: MyColors.clr2,
+                      backgroundColor: MyColors.clr3,
+                      // primary: MyColors.clr1,
+                      // onPrimary: MyColors.clr2,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(32.0),
                       ),
@@ -102,21 +103,28 @@ class _FooterPageState extends State<FooterPage> {
                   child: Row(
                     children: [
                       SocialMediaIconButton(
-                        icon: FontAwesomeIcons.facebook,
-                        url: 'https://www.facebook.com/akshay.jadhav.217',
+                        icon: FontAwesomeIcons.github,
+                        url: 'https://github.com/ap217',
+                        tip: 'github',
                       ),
                       SocialMediaIconButton(
                         icon: FontAwesomeIcons.twitter,
-                        url: 'https://google.com',
+                        url: 'https://twitter.com/Adi2171',
+                        tip: 'twitter',
                       ),
                       SocialMediaIconButton(
-                        icon: FontAwesomeIcons.instagram,
-                        url: 'https://www.facebook.com/akshay.jadhav.217',
+                        icon: FontAwesomeIcons.envelope,
+                        url: 'mailto:adityapatelda@gmail.com',
+                        tip: 'adityapatelda@gmail.com',
+                        // scheme: 'mailto',
+                        // path: 'recipient@example.com',
+                        // query: 'subject=Hello&body=Hello%20there!',
                       ),
-                      SocialMediaIconButton(
-                        icon: FontAwesomeIcons.pinterest,
-                        url: 'https://www.facebook.com/akshay.jadhav.217',
-                      ),
+                      // SocialMediaIconButton(
+                      //   icon: FontAwesomeIcons.pinterest,
+                      //   url: 'https://www.facebook.com/akshay.jadhav.217',
+                      //   tip: 'fb',
+                      // ),
                     ],
                   ),
                 ),
@@ -154,7 +162,8 @@ class SocialMediaIconButton extends StatefulWidget {
   final IconData icon;
   final String url;
 
-  const SocialMediaIconButton({Key? key, required this.icon, required this.url})
+  const SocialMediaIconButton(
+      {Key? key, required this.icon, required this.url, required String tip})
       : super(key: key);
 
   @override

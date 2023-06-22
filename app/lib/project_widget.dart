@@ -1,10 +1,15 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'my_colors.dart';
 
 class ProjectWidget extends StatefulWidget {
   final String imageurl, tech, desc, title;
-  ProjectWidget(this.desc, this.imageurl, this.tech, this.title);
+
+  var projecturl;
+  ProjectWidget(
+      this.desc, this.imageurl, this.tech, this.title, this.projecturl);
 
   @override
   _ProjectWidgetState createState() => _ProjectWidgetState();
@@ -29,17 +34,32 @@ class _ProjectWidgetState extends State<ProjectWidget> {
             child: Stack(
               children: [
                 Positioned(
-                  right: 40.0,
-                  child: Image(
-                    height: screenWidth >= 1300
-                        ? 550
-                        : screenWidth >= 1100
-                            ? 400
-                            : 300,
-                    image: AssetImage("assets/${widget.imageurl}"),
-                    fit: BoxFit.cover,
-                  ),
-                ),
+                    right: 40.0,
+                    child: GestureDetector(
+                      onTap: () async {
+                        await goToWebPage(widget.projecturl);
+                      },
+                      child: Image(
+                        height: screenWidth >= 1300
+                            ? 550
+                            : screenWidth >= 1100
+                                ? 400
+                                : 300,
+                        image: AssetImage("assets/${widget.imageurl}"),
+                        fit: BoxFit.cover,
+                      ),
+                    )
+
+                    // Image(
+                    //   height: screenWidth >= 1300
+                    //       ? 550
+                    //       : screenWidth >= 1100
+                    //           ? 400
+                    //           : 300,
+                    //   image: AssetImage("assets/${widget.imageurl}"),
+                    //   fit: BoxFit.cover,
+                    // ),
+                    ),
                 Positioned(
                   left: 40.0,
                   top: 40.0,
@@ -49,12 +69,22 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                       children: [
                         Align(
                           alignment: Alignment.centerLeft,
-                          child: Text(
-                            widget.title,
-                            style: const TextStyle(
-                              color: MyColors.clrwhite,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 45.0,
+                          child: RichText(
+                            text: TextSpan(
+                              text: widget.title,
+                              style: const TextStyle(
+                                color: MyColors.clrwhite,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 45.0,
+                              ),
+                              recognizer: TapGestureRecognizer()
+                                // ..onTap = () {
+                                //   // Add the action you want to perform when the link is tapped.
+                                //   // For example, you can navigate to a specific screen or open a URL.
+                                // },
+                                ..onTap = () async {
+                                  await goToWebPage(widget.projecturl);
+                                },
                             ),
                           ),
                         ),
@@ -152,23 +182,38 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Center(
+                      child: GestureDetector(
+                    onTap: () async {
+                      await goToWebPage(widget.projecturl);
+                    },
                     child: Image(
-                      width: MediaQuery.of(context).size.width,
+                      width: screenWidth - screenWidth * 0.2,
+                      // height: screenWidth >= 1300
+                      //     ? 550
+                      //     : screenWidth >= 1100
+                      //         ? 400
+                      //         : 300,
                       image: AssetImage("assets/${widget.imageurl}"),
-                      fit: BoxFit.fitWidth,
+                      fit: BoxFit.cover,
                     ),
-                  ),
+                  )),
                   SizedBox(height: 10),
-                  Text(
-                    widget.title,
-                    style: TextStyle(
-                      color: MyColors.clrwhite,
-                      fontWeight: FontWeight.bold,
-                      fontSize: MediaQuery.of(context).size.width >= 770
-                          ? 35
-                          : MediaQuery.of(context).size.width >= 530
-                              ? 30
-                              : 25,
+                  RichText(
+                    text: TextSpan(
+                      text: widget.title,
+                      style: const TextStyle(
+                        color: MyColors.clrwhite,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 45.0,
+                      ),
+                      recognizer: TapGestureRecognizer()
+                        // ..onTap = () {
+                        //   // Add the action you want to perform when the link is tapped.
+                        //   // For example, you can navigate to a specific screen or open a URL.
+                        // },
+                        ..onTap = () async {
+                          await goToWebPage(widget.projecturl);
+                        },
                     ),
                   ),
                   SizedBox(height: 10),
@@ -204,11 +249,20 @@ class _ProjectWidgetState extends State<ProjectWidget> {
       );
     }
   }
+
+  Future<void> goToWebPage(String urlString) async {
+    final Uri _url = Uri.parse(urlString);
+    if (!await launchUrl(_url)) {
+      throw 'Could not launch $_url';
+    }
+  }
 }
 
 class ProjectWidget2 extends StatefulWidget {
-  final String imageurl, tech, desc, title;
-  ProjectWidget2(this.desc, this.imageurl, this.tech, this.title);
+  final String imageurl, tech, desc, title, projecturl;
+
+  ProjectWidget2(
+      this.desc, this.imageurl, this.tech, this.title, this.projecturl);
   @override
   _ProjectWidget2State createState() => _ProjectWidget2State();
 }
@@ -243,17 +297,21 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
             child: Stack(
               children: [
                 Positioned(
-                  left: 40.0,
-                  child: Image(
-                    height: screenWidth >= 1300
-                        ? 550
-                        : screenWidth >= 1100
-                            ? 400
-                            : 300,
-                    image: AssetImage("assets/${widget.imageurl}"),
-                    fit: BoxFit.cover,
-                  ),
-                ),
+                    left: 40.0,
+                    child: GestureDetector(
+                      onTap: () async {
+                        await goToWebPage(widget.projecturl);
+                      },
+                      child: Image(
+                        height: screenWidth >= 1300
+                            ? 550
+                            : screenWidth >= 1100
+                                ? 400
+                                : 300,
+                        image: AssetImage("assets/${widget.imageurl}"),
+                        fit: BoxFit.cover,
+                      ),
+                    )),
                 Positioned(
                   right: 40.0,
                   top: 40.0,
@@ -263,12 +321,22 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
                       children: [
                         Align(
                           alignment: Alignment.centerLeft,
-                          child: Text(
-                            widget.title,
-                            style: const TextStyle(
-                              color: MyColors.clrwhite,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 45.0,
+                          child: RichText(
+                            text: TextSpan(
+                              text: widget.title,
+                              style: const TextStyle(
+                                color: MyColors.clrwhite,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 45.0,
+                              ),
+                              recognizer: TapGestureRecognizer()
+                                // ..onTap = () {
+                                //   // Add the action you want to perform when the link is tapped.
+                                //   // For example, you can navigate to a specific screen or open a URL.
+                                // },
+                                ..onTap = () async {
+                                  await goToWebPage(widget.projecturl);
+                                },
                             ),
                           ),
                         ),
@@ -372,23 +440,38 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Center(
+                      child: GestureDetector(
+                    onTap: () async {
+                      await goToWebPage(widget.projecturl);
+                    },
                     child: Image(
-                      width: MediaQuery.of(context).size.width,
+                      width: screenWidth - screenWidth * 0.2,
+                      // height: screenWidth >= 1300
+                      //     ? 550
+                      //     : screenWidth >= 1100
+                      //         ? 400
+                      //         : 300,
                       image: AssetImage("assets/${widget.imageurl}"),
-                      fit: BoxFit.fitWidth,
+                      fit: BoxFit.cover,
                     ),
-                  ),
+                  )),
                   SizedBox(height: 10),
-                  Text(
-                    widget.title,
-                    style: TextStyle(
-                      color: MyColors.clrwhite,
-                      fontWeight: FontWeight.bold,
-                      fontSize: MediaQuery.of(context).size.width >= 770
-                          ? 35
-                          : MediaQuery.of(context).size.width >= 530
-                              ? 30
-                              : 25,
+                  RichText(
+                    text: TextSpan(
+                      text: widget.title,
+                      style: const TextStyle(
+                        color: MyColors.clrwhite,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 45.0,
+                      ),
+                      recognizer: TapGestureRecognizer()
+                        // ..onTap = () {
+                        //   // Add the action you want to perform when the link is tapped.
+                        //   // For example, you can navigate to a specific screen or open a URL.
+                        // },
+                        ..onTap = () async {
+                          await goToWebPage(widget.projecturl);
+                        },
                     ),
                   ),
                   SizedBox(height: 10),
@@ -422,6 +505,13 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
           SizedBox(height: 70),
         ],
       );
+    }
+  }
+
+  Future<void> goToWebPage(String urlString) async {
+    final Uri _url = Uri.parse(urlString);
+    if (!await launchUrl(_url)) {
+      throw 'Could not launch $_url';
     }
   }
 }

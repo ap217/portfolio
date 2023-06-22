@@ -129,7 +129,8 @@ class _IntroPageState extends State<IntroPage> {
                     ),
                   ),
                   onPressed: () async {
-                    await goToWebPage("https://www.linkedin.com");
+                    await goToWebPage(
+                        "https://www.linkedin.com/in/adityapatel217/");
                   },
                   child: const Text(
                     "Get In Touch",
@@ -207,7 +208,8 @@ class _IntroPageState extends State<IntroPage> {
                         ),
                       ),
                       onPressed: () async {
-                        await goToWebPage("https://www.linkedin.com");
+                        await goToWebPage(
+                            "https://www.linkedin.com/in/adityapatel217/");
                       },
                       child: const Text(
                         "Get In Touch",
@@ -290,7 +292,8 @@ class _IntroPageState extends State<IntroPage> {
                             side: BorderSide(color: MyColors.clr2)),
                       ),
                       onPressed: () async {
-                        await goToWebPage("https://www.linkedin.com");
+                        await goToWebPage(
+                            "https://www.linkedin.com/in/adityapatel217/");
                       },
                       child: const Text(
                         "Get In Touch",
