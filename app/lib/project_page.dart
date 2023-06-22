@@ -27,10 +27,10 @@ class _ProjectPageState extends State<ProjectPage> {
           ),
           SizedBox(height: 40.0),
           ProjectWidget(
-              "Food delivery Application Build With Flutter And Firebase (Backend)",
-              "project2.png",
-              "Flutter Dart Firebase",
-              "Foodie"),
+              "News app built using Flutter.\nThe app uses the API service newsapi.org to fetch news.\nIt integrates a WebView for reading complete articles within the app.",
+              "mockup1.png",
+              "Flutter Dart newsapi.org",
+              "QuickRead"),
           ProjectWidget2(
               "Social Media Application Builded With Android Studio And Firebase(Backend)",
               "project2.png",
