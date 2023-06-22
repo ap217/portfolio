@@ -27,20 +27,20 @@ class _ProjectPageState extends State<ProjectPage> {
           ),
           const SizedBox(height: 40.0),
           ProjectWidget(
-              "▪News app built using Flutter.\n▪The app uses the API service newsapi.org to fetch news.\n▪It integrates a WebView for reading complete articles within the app.",
+              "News app built using Flutter.\nThe app uses the API service newsapi.org to fetch news.\nIt integrates a WebView for reading complete articles within the app.",
               "mockup1.png",
               "Flutter Dart newsapi.org",
               "QuickRead",
               "https://github.com/ap217/quick_read"),
           ProjectWidget2(
-            "▪Employee Management App developed using Flutter(Frontend), Node.js(Backend) and MongoDB(Database).\n▪App with 3 role, employee, manager and admin.",
+            "Employee Management App developed using Flutter(Frontend), Node.js(Backend) and MongoDB(Database).\nApp with 3 role, employee, manager and admin.",
             "mockup2se.png",
             "Flutter Dart",
             "nicher",
             "https://github.com/ap217/IT314_project_1",
           ),
           ProjectWidget(
-            "▪Portfolio Website built using Flutter.\n▪It is a responsive website that works on all devices.\n▪It is hosted on Firebase Hosting.",
+            "Portfolio Website built using Flutter.\nIt is a responsive website that works on all devices.\nIt is hosted on Firebase Hosting.",
             "mockup3pf.png",
             "Flutter Dart Firebase",
             "Personal Protfolio",
