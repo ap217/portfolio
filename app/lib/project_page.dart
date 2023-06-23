@@ -27,11 +27,13 @@ class _ProjectPageState extends State<ProjectPage> {
           ),
           const SizedBox(height: 40.0),
           ProjectWidget(
-              "News app built using Flutter.\nThe app uses the API service newsapi.org to fetch news.\nIt integrates a WebView for reading complete articles within the app.",
-              "mockup1.png",
-              "Flutter Dart newsapi.org",
-              "QuickRead",
-              "https://github.com/ap217/quick_read"),
+            "News app built using Flutter.\nThe app uses the API service newsapi.org to fetch news.\nIt integrates a WebView for reading complete articles within the app.",
+            "mockup1.png",
+            "Flutter Dart newsapi.org",
+            "QuickRead",
+            "https://github.com/ap217/quick_read",
+          ),
+          SizedBox(height: 40.0),
           ProjectWidget2(
             "Employee Management App developed using Flutter(Frontend), Node.js(Backend) and MongoDB(Database).\nApp with 3 role, employee, manager and admin.",
             "mockup2se.png",
@@ -39,6 +41,7 @@ class _ProjectPageState extends State<ProjectPage> {
             "nicher",
             "https://github.com/ap217/IT314_project_1",
           ),
+          SizedBox(height: 40.0),
           ProjectWidget(
             "Portfolio Website built using Flutter.\nIt is a responsive website that works on all devices.\nIt is hosted on Firebase Hosting.",
             "mockup3pf.png",
@@ -46,6 +49,7 @@ class _ProjectPageState extends State<ProjectPage> {
             "Personal Protfolio",
             "https://github.com/ap217/portfolio",
           ),
+          SizedBox(height: 40.0),
           // ProjectWidget2(
           //     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.",
           //     "project1.png",

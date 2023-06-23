@@ -26,25 +26,30 @@ class _ProjectWidgetState extends State<ProjectWidget> {
         children: [
           // const SizedBox(height: 50),
           Container(
-            height: screenWidth >= 1300
-                ? 750
-                : screenWidth >= 1100
-                    ? 550
-                    : 450,
+            // height: 1000,
+            width: screenWidth - screenWidth * 0.1,
+            height: (screenWidth / 2) / 1.2,
+            // height: screenWidth >= 1300
+            //     ? 750
+            //     : screenWidth >= 1100
+            //         ? 550
+            //         : 450,
             child: Stack(
               children: [
                 Positioned(
-                    right: 40.0,
+                    // right: 40.0,
+                    right: 0,
                     child: GestureDetector(
                       onTap: () async {
                         await goToWebPage(widget.projecturl);
                       },
                       child: Image(
-                        height: screenWidth >= 1300
-                            ? 550
-                            : screenWidth >= 1100
-                                ? 400
-                                : 300,
+                        width: screenWidth - screenWidth * 0.5,
+                        // height: screenWidth >= 1300
+                        //     ? 550
+                        //     : screenWidth >= 1100
+                        //         ? 400
+                        //         : 300,
                         image: AssetImage("assets/${widget.imageurl}"),
                         fit: BoxFit.cover,
                       ),
@@ -61,102 +66,95 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                     // ),
                     ),
                 Positioned(
-                  left: 40.0,
-                  top: 40.0,
-                  child: Container(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: RichText(
-                            text: TextSpan(
-                              text: widget.title,
-                              style: const TextStyle(
-                                color: MyColors.clrwhite,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 45.0,
-                              ),
-                              recognizer: TapGestureRecognizer()
-                                // ..onTap = () {
-                                //   // Add the action you want to perform when the link is tapped.
-                                //   // For example, you can navigate to a specific screen or open a URL.
-                                // },
-                                ..onTap = () async {
-                                  await goToWebPage(widget.projecturl);
-                                },
+                  left: 0,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: RichText(
+                          text: TextSpan(
+                            text: widget.title,
+                            style: const TextStyle(
+                              color: MyColors.clrwhite,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 45.0,
+                            ),
+                            recognizer: TapGestureRecognizer()
+                              // ..onTap = () {
+                              //   // Add the action you want to perform when the link is tapped.
+                              //   // For example, you can navigate to a specific screen or open a URL.
+                              // },
+                              ..onTap = () async {
+                                await goToWebPage(widget.projecturl);
+                              },
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20.0,
+                      ),
+                      // Positioned(
+                      //   top: 70,
+                      //   left: 0,
+                      //   child:
+                      Container(
+                        width: screenWidth * 0.36,
+                        padding: const EdgeInsets.all(8.0),
+                        decoration: const BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black54,
+                              blurRadius: 5.0,
+                            ),
+                          ],
+                          color: MyColors.clr3,
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(18.0),
+                          child: Text(
+                            widget.desc,
+                            style: const TextStyle(
+                              color: MyColors.clrwhite,
+                              fontSize: 20.0,
                             ),
                           ),
                         ),
-                        const SizedBox(
-                          height: 20.0,
-                        ),
-                        Positioned(
-                          top: 70,
-                          left: 150,
-                          child: Container(
-                            width: screenWidth * 0.33,
-                            padding: const EdgeInsets.all(8.0),
-                            decoration: const BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black54,
-                                  blurRadius: 5.0,
-                                ),
-                              ],
-                              color: MyColors.clr3,
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(10)),
+                      ),
+                      // ),
+                      const SizedBox(
+                        height: 20.0,
+                      ),
+                      // Positioned(
+                      //   top: 100,
+                      //   left: 0,
+                      //   child:
+                      Container(
+                        padding: const EdgeInsets.all(8.0),
+                        decoration: const BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black54,
+                              blurRadius: 5.0,
                             ),
-                            child: Container(
-                              child: Padding(
-                                padding: const EdgeInsets.all(18.0),
-                                child: Text(
-                                  widget.desc,
-                                  style: const TextStyle(
-                                    color: MyColors.clrwhite,
-                                    fontSize: 20.0,
-                                  ),
-                                ),
-                              ),
+                          ],
+                          color: MyColors.clr3,
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(18.0),
+                          child: Text(
+                            widget.tech,
+                            style: const TextStyle(
+                              color: MyColors.clr2,
+                              fontSize: 20.0,
                             ),
                           ),
                         ),
-                        const SizedBox(
-                          height: 20.0,
-                        ),
-                        Positioned(
-                          top: 70,
-                          left: 150,
-                          child: Container(
-                            padding: EdgeInsets.all(8.0),
-                            decoration: const BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black54,
-                                  blurRadius: 5.0,
-                                ),
-                              ],
-                              color: MyColors.clr3,
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(10)),
-                            ),
-                            child: Center(
-                              child: Padding(
-                                padding: const EdgeInsets.all(18.0),
-                                child: Text(
-                                  widget.tech,
-                                  style: const TextStyle(
-                                    color: MyColors.clr2,
-                                    fontSize: 20.0,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                      // ),
+                    ],
                   ),
                 ),
               ],
@@ -289,32 +287,37 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
           // const SizedBox(height: 50),
           Container(
             // height: MediaQuery.of(context).size.height * 0.8,
-            height: screenWidth >= 1300
-                ? 750
-                : screenWidth >= 1100
-                    ? 550
-                    : 450,
+            // height: 1000,
+            width: screenWidth - screenWidth * 0.1,
+            height: (screenWidth / 2) / 1.2,
+            // height: screenWidth >= 1300
+            //     ? 750
+            //     : screenWidth >= 1100
+            //         ? 550
+            //         : 450,
             child: Stack(
               children: [
                 Positioned(
-                    left: 40.0,
+                    // left: 40.0,
+                    left: 0,
                     child: GestureDetector(
                       onTap: () async {
                         await goToWebPage(widget.projecturl);
                       },
                       child: Image(
-                        height: screenWidth >= 1300
-                            ? 550
-                            : screenWidth >= 1100
-                                ? 400
-                                : 300,
+                        width: screenWidth - screenWidth * 0.5,
+                        // height: screenWidth >= 1300
+                        //     ? 550
+                        //     : screenWidth >= 1100
+                        //         ? 400
+                        //         : 300,
                         image: AssetImage("assets/${widget.imageurl}"),
                         fit: BoxFit.cover,
                       ),
                     )),
                 Positioned(
-                  right: 40.0,
-                  top: 40.0,
+                  right: 0.0,
+                  // top: 40.0,
                   child: Container(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
@@ -343,25 +346,25 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
                         const SizedBox(
                           height: 20.0,
                         ),
-                        Positioned(
-                          top: 70,
-                          right: 150,
+                        // Positioned(
+                        //   top: 70,
+                        //   right: 0,
+                        //   child:
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.36,
+                          padding: const EdgeInsets.all(8.0),
+                          decoration: const BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black54,
+                                blurRadius: 5.0,
+                              ),
+                            ],
+                            color: MyColors.clr3,
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                          ),
                           child: Container(
-                            width: MediaQuery.of(context).size.width * 0.33,
-                            padding: const EdgeInsets.all(8.0),
-                            decoration: const BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black54,
-                                  blurRadius: 5.0,
-                                ),
-                              ],
-                              color: MyColors.clr3,
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(10)),
-                            ),
-                            child: Container(
-                                child: Padding(
+                            child: Padding(
                               padding: const EdgeInsets.all(18.0),
                               child: Text(
                                 widget.desc,
@@ -370,42 +373,43 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
                                   fontSize: 20.0,
                                 ),
                               ),
-                            )),
+                            ),
                           ),
                         ),
+                        // ),
                         const SizedBox(
                           height: 20.0,
                         ),
-                        Positioned(
-                          top: 70,
-                          left: 150,
-                          child: Container(
-                            padding: EdgeInsets.all(8.0),
-                            decoration: const BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black54,
-                                  blurRadius: 5.0,
-                                ),
-                              ],
-                              color: MyColors.clr3,
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(10)),
-                            ),
-                            child: Center(
-                              child: Padding(
-                                padding: const EdgeInsets.all(18.0),
-                                child: Text(
-                                  widget.tech,
-                                  style: const TextStyle(
-                                    color: MyColors.clr2,
-                                    fontSize: 20.0,
-                                  ),
+                        // Positioned(
+                        //   top: 100,
+                        //   right: 0,
+                        //   child:
+                        Container(
+                          // padding: EdgeInsets.all(8.0),
+                          decoration: const BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black54,
+                                blurRadius: 5.0,
+                              ),
+                            ],
+                            color: MyColors.clr3,
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                          ),
+                          child: Center(
+                            child: Padding(
+                              padding: const EdgeInsets.all(18.0),
+                              child: Text(
+                                widget.tech,
+                                style: const TextStyle(
+                                  color: MyColors.clr2,
+                                  fontSize: 20.0,
                                 ),
                               ),
                             ),
                           ),
                         ),
+                        // ),
                       ],
                     ),
                   ),
