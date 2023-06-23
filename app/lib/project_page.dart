@@ -46,7 +46,7 @@ class _ProjectPageState extends State<ProjectPage> {
             "Portfolio Website built using Flutter.\nIt is a responsive website that works on all devices.\nIt is hosted on Firebase Hosting.",
             "mockup3pf.png",
             "Flutter Dart Firebase",
-            "Personal Protfolio",
+            "Personal Portfolio",
             "https://github.com/ap217/portfolio",
           ),
           SizedBox(height: 40.0),
