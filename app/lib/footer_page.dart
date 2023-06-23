@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -98,6 +99,16 @@ class _FooterPageState extends State<FooterPage> {
                 const SizedBox(
                   height: 40,
                 ),
+                const Text(
+                  "adityapatelda@gmail.com",
+                  style: TextStyle(
+                      color: MyColors.clr2,
+                      // fontWeight: FontWeight.bold,
+                      fontSize: 16.0),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
                 const SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
@@ -112,14 +123,14 @@ class _FooterPageState extends State<FooterPage> {
                         url: 'https://twitter.com/Adi2171',
                         tip: 'twitter',
                       ),
-                      SocialMediaIconButton(
-                        icon: FontAwesomeIcons.envelope,
-                        url: 'mailto:adityapatelda@gmail.com',
-                        tip: 'adityapatelda@gmail.com',
-                        // scheme: 'mailto',
-                        // path: 'recipient@example.com',
-                        // query: 'subject=Hello&body=Hello%20there!',
-                      ),
+                      // SocialMediaIconButton(
+                      //   icon: FontAwesomeIcons.envelope,
+                      //   url: 'adityapatelda@gmail.com',
+                      //   tip: 'adityapatelda@gmail.com',
+                      //   // scheme: 'mailto',
+                      //   // path: 'recipient@example.com',
+                      //   // query: 'subject=Hello&body=Hello%20there!',
+                      // ),
                       // SocialMediaIconButton(
                       //   icon: FontAwesomeIcons.pinterest,
                       //   url: 'https://www.facebook.com/akshay.jadhav.217',
