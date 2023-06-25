@@ -5,11 +5,11 @@ import 'package:url_launcher/url_launcher.dart';
 import 'my_colors.dart';
 
 class ProjectWidget extends StatefulWidget {
-  final String imageurl, tech, desc, title;
+  final String imageurl, tech, desc, title, apklink, linktext;
 
   var projecturl;
-  ProjectWidget(
-      this.desc, this.imageurl, this.tech, this.title, this.projecturl);
+  ProjectWidget(this.desc, this.imageurl, this.tech, this.title,
+      this.projecturl, this.apklink, this.linktext);
 
   @override
   _ProjectWidgetState createState() => _ProjectWidgetState();
@@ -113,12 +113,46 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                         ),
                         child: Padding(
                           padding: const EdgeInsets.all(18.0),
-                          child: Text(
-                            widget.desc,
-                            style: const TextStyle(
-                              color: MyColors.clrwhite,
-                              fontSize: 20.0,
-                            ),
+                          child: Column(
+                            children: [
+                              Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  widget.desc,
+                                  style: const TextStyle(
+                                    color: MyColors.clrwhite,
+                                    fontSize: 20.0,
+                                  ),
+                                ),
+                              ),
+                              if (widget.apklink != "##") ...[
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 6.0),
+                                  child: Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: RichText(
+                                      text: TextSpan(
+                                        text: widget.linktext,
+                                        style: const TextStyle(
+                                          color: MyColors.clr2,
+                                          // fontWeight: FontWeight.bold,
+                                          fontSize: 20.0,
+                                        ),
+                                        recognizer: TapGestureRecognizer()
+                                          // ..onTap = () {
+                                          //   // Add the action you want to perform when the link is tapped.
+                                          //   // For example, you can navigate to a specific screen or open a URL.
+                                          // },
+                                          ..onTap = () async {
+                                            await goToWebPage(widget.apklink);
+                                          },
+                                      ),
+                                    ),
+                                    //  )
+                                  ),
+                                ),
+                              ]
+                            ],
                           ),
                         ),
                       ),
@@ -227,16 +261,52 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                     ),
                   ),
                   SizedBox(height: 10),
-                  Text(
-                    widget.desc,
-                    style: TextStyle(
-                      color: MyColors.clrwhite,
-                      fontSize: MediaQuery.of(context).size.width >= 770
-                          ? 20
-                          : MediaQuery.of(context).size.width >= 530
-                              ? 18
-                              : 16,
-                    ),
+                  Column(
+                    children: [
+                      Text(
+                        widget.desc,
+                        style: TextStyle(
+                          color: MyColors.clrwhite,
+                          fontSize: MediaQuery.of(context).size.width >= 770
+                              ? 20
+                              : MediaQuery.of(context).size.width >= 530
+                                  ? 18
+                                  : 16,
+                        ),
+                      ),
+                      if (widget.apklink != "##") ...[
+                        Padding(
+                          padding: const EdgeInsets.only(top: 6.0, bottom: 4.0),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: RichText(
+                              text: TextSpan(
+                                text: widget.linktext,
+                                style: TextStyle(
+                                  color: MyColors.clr2,
+                                  // fontWeight: FontWeight.bold,
+                                  fontSize: MediaQuery.of(context).size.width >=
+                                          770
+                                      ? 20
+                                      : MediaQuery.of(context).size.width >= 530
+                                          ? 18
+                                          : 16,
+                                ),
+                                recognizer: TapGestureRecognizer()
+                                  // ..onTap = () {
+                                  //   // Add the action you want to perform when the link is tapped.
+                                  //   // For example, you can navigate to a specific screen or open a URL.
+                                  // },
+                                  ..onTap = () async {
+                                    await goToWebPage(widget.apklink);
+                                  },
+                              ),
+                            ),
+                            //  )
+                          ),
+                        ),
+                      ]
+                    ],
                   ),
                 ],
               ),
@@ -257,10 +327,10 @@ class _ProjectWidgetState extends State<ProjectWidget> {
 }
 
 class ProjectWidget2 extends StatefulWidget {
-  final String imageurl, tech, desc, title, projecturl;
+  final String imageurl, tech, desc, title, projecturl, apklink, linktext;
 
-  ProjectWidget2(
-      this.desc, this.imageurl, this.tech, this.title, this.projecturl);
+  ProjectWidget2(this.desc, this.imageurl, this.tech, this.title,
+      this.projecturl, this.apklink, this.linktext);
   @override
   _ProjectWidget2State createState() => _ProjectWidget2State();
 }
@@ -366,12 +436,44 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
                           child: Container(
                             child: Padding(
                               padding: const EdgeInsets.all(18.0),
-                              child: Text(
-                                widget.desc,
-                                style: const TextStyle(
-                                  color: MyColors.clrwhite,
-                                  fontSize: 20.0,
-                                ),
+                              child: Column(
+                                children: [
+                                  Text(
+                                    widget.desc,
+                                    style: const TextStyle(
+                                      color: MyColors.clrwhite,
+                                      fontSize: 20.0,
+                                    ),
+                                  ),
+                                  if (widget.apklink != "##") ...[
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 6.0),
+                                      child: Align(
+                                        alignment: Alignment.centerLeft,
+                                        child: RichText(
+                                          text: TextSpan(
+                                            text: widget.linktext,
+                                            style: const TextStyle(
+                                              color: MyColors.clr2,
+                                              // fontWeight: FontWeight.bold,
+                                              fontSize: 20.0,
+                                            ),
+                                            recognizer: TapGestureRecognizer()
+                                              // ..onTap = () {
+                                              //   // Add the action you want to perform when the link is tapped.
+                                              //   // For example, you can navigate to a specific screen or open a URL.
+                                              // },
+                                              ..onTap = () async {
+                                                await goToWebPage(
+                                                    widget.apklink);
+                                              },
+                                          ),
+                                        ),
+                                        //  )
+                                      ),
+                                    ),
+                                  ]
+                                ],
                               ),
                             ),
                           ),
@@ -491,16 +593,52 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
                     ),
                   ),
                   SizedBox(height: 10),
-                  Text(
-                    widget.desc,
-                    style: TextStyle(
-                      color: MyColors.clrwhite,
-                      fontSize: MediaQuery.of(context).size.width >= 770
-                          ? 20
-                          : MediaQuery.of(context).size.width >= 530
-                              ? 18
-                              : 16,
-                    ),
+                  Column(
+                    children: [
+                      Text(
+                        widget.desc,
+                        style: TextStyle(
+                          color: MyColors.clrwhite,
+                          fontSize: MediaQuery.of(context).size.width >= 770
+                              ? 20
+                              : MediaQuery.of(context).size.width >= 530
+                                  ? 18
+                                  : 16,
+                        ),
+                      ),
+                      if (widget.apklink != "##") ...[
+                        Padding(
+                          padding: const EdgeInsets.only(top: 6.0, bottom: 4.0),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: RichText(
+                              text: TextSpan(
+                                text: widget.linktext,
+                                style: TextStyle(
+                                  color: MyColors.clr2,
+                                  // fontWeight: FontWeight.bold,
+                                  fontSize: MediaQuery.of(context).size.width >=
+                                          770
+                                      ? 20
+                                      : MediaQuery.of(context).size.width >= 530
+                                          ? 18
+                                          : 16,
+                                ),
+                                recognizer: TapGestureRecognizer()
+                                  // ..onTap = () {
+                                  //   // Add the action you want to perform when the link is tapped.
+                                  //   // For example, you can navigate to a specific screen or open a URL.
+                                  // },
+                                  ..onTap = () async {
+                                    await goToWebPage(widget.apklink);
+                                  },
+                              ),
+                            ),
+                            //  )
+                          ),
+                        ),
+                      ]
+                    ],
                   ),
                 ],
               ),

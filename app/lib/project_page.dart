@@ -32,6 +32,8 @@ class _ProjectPageState extends State<ProjectPage> {
             "Flutter Dart newsapi.org",
             "QuickRead",
             "https://github.com/ap217/quick_read",
+            "https://github.com/ap217/quick_read/blob/main/QuickRead.apk",
+            "▪Download APK",
           ),
           SizedBox(height: 40.0),
           ProjectWidget2(
@@ -40,6 +42,8 @@ class _ProjectPageState extends State<ProjectPage> {
             "Flutter Dart",
             "nicher",
             "https://github.com/ap217/IT314_project_1",
+            "https://github.com/ap217/IT314_project_1/blob/main/nicher.apk",
+            "▪Download APK",
           ),
           SizedBox(height: 40.0),
           ProjectWidget(
@@ -48,6 +52,8 @@ class _ProjectPageState extends State<ProjectPage> {
             "Flutter Dart Firebase",
             "Personal Portfolio",
             "https://github.com/ap217/portfolio",
+            "##",
+            "##",
           ),
           SizedBox(height: 40.0),
           // ProjectWidget2(
