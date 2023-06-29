@@ -438,11 +438,14 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
                               padding: const EdgeInsets.all(18.0),
                               child: Column(
                                 children: [
-                                  Text(
-                                    widget.desc,
-                                    style: const TextStyle(
-                                      color: MyColors.clrwhite,
-                                      fontSize: 20.0,
+                                  Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text(
+                                      widget.desc,
+                                      style: const TextStyle(
+                                        color: MyColors.clrwhite,
+                                        fontSize: 20.0,
+                                      ),
                                     ),
                                   ),
                                   if (widget.apklink != "##") ...[

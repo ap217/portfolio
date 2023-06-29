@@ -28,7 +28,7 @@ class _ProjectPageState extends State<ProjectPage> {
           const SizedBox(height: 40.0),
           ProjectWidget(
             "▪News app built using Flutter.\n▪The app uses the API service newsapi.org to fetch news.\n▪It integrates a WebView for reading complete articles within the app.",
-            "mockup1.png",
+            "mockup1_update.png",
             "Flutter Dart newsapi.org",
             "QuickRead",
             "https://github.com/ap217/quick_read",
@@ -49,9 +49,9 @@ class _ProjectPageState extends State<ProjectPage> {
           ProjectWidget(
             "▪Simple Contact List App.\n▪Use MongoDB Cloud as database.\n▪Project to learn CRUD operations on databse using mongoDB.",
             "mockup4db.png",
-            "Flutter Dart MongoDB",
+            "Flutter MongoDB Cloud Node.js",
             "Contact List",
-            "https://github.com/ap217",
+            "https://github.com/ap217/contactListMongoNode",
             "##",
             "##",
           ),
