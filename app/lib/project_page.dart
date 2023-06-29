@@ -47,6 +47,16 @@ class _ProjectPageState extends State<ProjectPage> {
           ),
           SizedBox(height: 40.0),
           ProjectWidget(
+            "▪Simple Contact List App.\n▪Use MongoDB Cloud as database.\n▪Project to learn CRUD operations on databse using mongoDB.",
+            "mockup4db.png",
+            "Flutter Dart MongoDB",
+            "Contact List",
+            "https://github.com/ap217",
+            "##",
+            "##",
+          ),
+          SizedBox(height: 40.0),
+          ProjectWidget2(
             "▪Portfolio Website built using Flutter.\n▪It is a responsive web app that works on all devices.\n▪It is hosted on Firebase Hosting.",
             "mockup3pf.png",
             "Flutter Dart Firebase",
@@ -56,12 +66,6 @@ class _ProjectPageState extends State<ProjectPage> {
             "##",
           ),
           SizedBox(height: 40.0),
-          // ProjectWidget2(
-          //     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.",
-          //     "project1.png",
-          //     "Flutter Dart Firebase",
-          //     "asda",
-          //     "https://github.com/ap217"),
         ],
       ),
     );
