@@ -63,8 +63,8 @@ class _FooterPageState extends State<FooterPage> {
                     width: 600,
                     child: Text(
                       str,
-                      style:
-                          TextStyle(color: MyColors.clrwhite54, fontSize: 20.0),
+                      style: const TextStyle(
+                          color: MyColors.clrwhite54, fontSize: 20.0),
                       textAlign: TextAlign.center,
                     )),
                 const SizedBox(
@@ -124,18 +124,15 @@ class _FooterPageState extends State<FooterPage> {
                         tip: 'twitter',
                       ),
                       // SocialMediaIconButton(
-                      //   icon: FontAwesomeIcons.envelope,
-                      //   url: 'adityapatelda@gmail.com',
-                      //   tip: 'adityapatelda@gmail.com',
-                      //   // scheme: 'mailto',
-                      //   // path: 'recipient@example.com',
-                      //   // query: 'subject=Hello&body=Hello%20there!',
+                      //   icon: Icons.mail,
+                      //   url: 'mailto:adityapatelda@gmail.com',
+                      //   tip: 'Email',
                       // ),
-                      // SocialMediaIconButton(
-                      //   icon: FontAwesomeIcons.pinterest,
-                      //   url: 'https://www.facebook.com/akshay.jadhav.217',
-                      //   tip: 'fb',
-                      // ),
+                      SocialMediaIconButton(
+                        icon: FontAwesomeIcons.medium,
+                        url: 'https://medium.com/@adi217',
+                        tip: 'medium',
+                      ),
                     ],
                   ),
                 ),
@@ -159,14 +156,12 @@ class _FooterPageState extends State<FooterPage> {
     );
   }
 
-  // goToWebPage(String s) {
   Future<void> goToWebPage(String urlString) async {
     final Uri _url = Uri.parse(urlString);
     if (!await launchUrl(_url)) {
       throw 'Could not launch $_url';
     }
   }
-  // }
 }
 
 class SocialMediaIconButton extends StatefulWidget {

@@ -1,3 +1,4 @@
+import 'package:app/blog_page.dart';
 import 'package:app/project_page.dart';
 import 'package:flutter/material.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
@@ -298,6 +299,9 @@ class _HomePageState extends State<HomePage> {
                                 Container(
                                   key: itemKeyPro,
                                   child: ProjectPage(),
+                                ),
+                                Container(
+                                  child: BlogPage(),
                                 ),
                                 // Container(
                                 //   padding: EdgeInsets.fromLTRB(

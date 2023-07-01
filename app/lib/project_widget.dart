@@ -39,7 +39,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                 Positioned(
                     // right: 40.0,
                     right: 0,
-                    child: GestureDetector(
+                    child: InkWell(
                       onTap: () async {
                         await goToWebPage(widget.projecturl);
                       },
@@ -214,7 +214,7 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Center(
-                      child: GestureDetector(
+                      child: InkWell(
                     onTap: () async {
                       await goToWebPage(widget.projecturl);
                     },
@@ -370,7 +370,7 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
                 Positioned(
                     // left: 40.0,
                     left: 0,
-                    child: GestureDetector(
+                    child: InkWell(
                       onTap: () async {
                         await goToWebPage(widget.projecturl);
                       },
@@ -549,7 +549,7 @@ class _ProjectWidget2State extends State<ProjectWidget2> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Center(
-                      child: GestureDetector(
+                      child: InkWell(
                     onTap: () async {
                       await goToWebPage(widget.projecturl);
                     },

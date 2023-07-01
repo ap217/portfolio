@@ -65,7 +65,7 @@ class _ProjectPageState extends State<ProjectPage> {
             "##",
             "##",
           ),
-          SizedBox(height: 40.0),
+          SizedBox(height: 20.0),
         ],
       ),
     );
