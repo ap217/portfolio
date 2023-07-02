@@ -12,8 +12,10 @@ class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
     String str = "I Am Aditya Patel, Student Developer.";
+    // String str2 =
+    // "I have developed Apps and Websites using Flutter; some project demos are shown below; I'm a student at Dhirubhai Ambani Institute of Information and Communication Technology (DAIICT), Gandhinagar. I'm pursuing ICT. Currently, I'm in 3rd year(2022-2023). I am focused on Development and DSA.";
     String str2 =
-        "I have developed Apps and Websites using Flutter; some project demos are shown below; I'm a student at Dhirubhai Ambani Institute of Information and Communication Technology (DAIICT), Gandhinagar. I'm pursuing ICT. Currently, I'm in 3rd year(2022-2023). I am focused on Development and DSA.";
+        "I am pursuing a B.Tech in Information and Communication Technology at DA-IICT in Gandhinagar. My primary focus is development. As a Flutter developer, I specialize in building cross-platform mobile applications using Flutter and Dart. I have gained proficiency in utilizing various tools and technologies, including Flutter, Dart, and mongoDB(essential). Throughout my academic journey, I am always eager to learn and stay up-to-date with the latest industry trends and advancements, ensuring I can deliver innovative solutions.";
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         // Determine the screen width to define responsive behavior

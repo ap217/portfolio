@@ -41,7 +41,7 @@ class BlogPage extends StatelessWidget {
                       BlogGrid(
                         "Flutter vs React Native",
                         "https://medium.com/@studystorage217/flutter-vs-react-native-a-comparative-analysis-4f07ad55374e",
-                        "Medium artical",
+                        "Medium article",
                       ),
                       if (screenWidth > 600)
                         const SizedBox(width: 40.0)
@@ -50,16 +50,16 @@ class BlogPage extends StatelessWidget {
                       BlogGrid(
                         "Stack Widget in Flutter",
                         "https://medium.com/@adi217/stack-widget-in-flutter-b4169828c054",
-                        "Medium artical",
+                        "Medium article",
                       ),
                       if (screenWidth > 600)
                         const SizedBox(width: 40.0)
                       else
                         const SizedBox(width: 20),
                       BlogGrid(
-                        "Flutter is the best",
-                        "https://medium.com/@adi217",
-                        "Medium artical",
+                        "Responsive Design in Flutter",
+                        "https://medium.com/@adi217/responsive-design-in-flutter-364e7baa9f0f",
+                        "Medium article",
                       ),
                     ],
                   ))

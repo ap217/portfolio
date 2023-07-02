@@ -38,6 +38,7 @@ class _BlogGridState extends State<BlogGrid> {
                       : 80,
           decoration: const BoxDecoration(
             color: MyColors.clr3,
+            borderRadius: BorderRadius.all(Radius.circular(4)),
             boxShadow: [
               BoxShadow(
                 color: MyColors.clr2,
