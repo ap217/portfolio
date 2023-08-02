@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'model/Method.dart';
+import 'object.dart';
 
 // import 'google_fonts.dart';
 class IntroPage extends StatefulWidget {
@@ -54,7 +55,7 @@ class _IntroPageState extends State<IntroPage> {
 
   @override
   Widget build(BuildContext context) {
-    Method method = new Method();
+    // Method method = new Method();
     String str = "Student Developer Who Exploring New Things In Dev World";
     return LayoutBuilder(
       builder: (context, constraints) {
@@ -74,77 +75,236 @@ class _IntroPageState extends State<IntroPage> {
   }
 
   Widget _buildMobileLayout(String str) {
+    // return Column(
+    //   children: [
+    //     Container(
+    //       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 32.0),
+    //       child: Column(
+    //         crossAxisAlignment: CrossAxisAlignment.start,
+    //         children: [
+    //           const SizedBox(height: 20.0),
+    //           const Text(
+    //             'Hi There! I am,',
+    //             style: TextStyle(
+    //                 color: Color.fromARGB(255, 255, 255, 255),
+    //                 fontWeight: FontWeight.bold,
+    //                 fontSize: 15.0),
+    //           ),
+    //           const SizedBox(height: 5.0),
+    //           Text(
+    //             style: GoogleFonts.dancingScript(
+    //               color: MyColors.clr2,
+    //               fontWeight: FontWeight.w700,
+    //               // fontSize: 140,
+    //               fontSize: MediaQuery.of(context).size.width < 300 ? 30 : 45,
+    //             ),
+    //             'Aditya Patel',
+    //             // style: TextStyle(
+    //             //   color: MyColors.clr2,
+    //             //   fontWeight: FontWeight.bold,
+    //             //   // fontSize: 45.0,
+    //             //   fontSize: MediaQuery.of(context).size.width < 300 ? 30 : 45,
+    //             // ),
+    //           ),
+    //           const SizedBox(height: 5.0),
+    //           Text(
+    //             currentText,
+    //             style: const TextStyle(
+    //                 color: MyColors.clrwhite54,
+    //                 // fontWeight: FontWeight.bold,
+    //                 fontSize: 15.0),
+    //           ),
+    //           const SizedBox(height: 20.0),
+    //           SizedBox(
+    //             height: 50,
+    //             width: 150,
+    //             // width: double.infinity,
+    //             child: ElevatedButton(
+    //               style: ElevatedButton.styleFrom(
+    //                 primary: MyColors.clr1,
+    //                 onPrimary: MyColors.clr2,
+    //                 shape: RoundedRectangleBorder(
+    //                   borderRadius: BorderRadius.circular(6.0),
+    //                   side: BorderSide(color: MyColors.clr2),
+    //                 ),
+    //               ),
+    //               onPressed: () async {
+    //                 await goToWebPage(
+    //                     "https://www.linkedin.com/in/adityapatel217/");
+    //               },
+    //               child: const Text(
+    //                 "Get In Touch",
+    //                 style: TextStyle(
+    //                   color: MyColors.clr2,
+    //                   fontWeight: FontWeight.bold,
+    //                   fontSize: 16.0,
+    //                 ),
+    //               ),
+    //             ),
+    //           ),
+    //           const SizedBox(height: 20.0),
+    //           Text(
+    //             str,
+    //             style: const TextStyle(fontSize: 16.0, color: Colors.white60),
+    //           ),
+    //         ],
+    //       ),
+    //     ),
+    //   ],
+    // );
+
+    ///////////////
+    final screenWidth = MediaQuery.of(context).size.width;
     return Column(
       children: [
         Container(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 32.0),
+          // width: MediaQuery.of(context).size.width,
+          padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 32.0),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            // direction: Axis.horizontal,
             children: [
-              const SizedBox(height: 20.0),
-              const Text(
-                'Hi There! I am,',
-                style: TextStyle(
-                    color: Color.fromARGB(255, 255, 255, 255),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 15.0),
-              ),
-              const SizedBox(height: 5.0),
-              Text(
-                style: GoogleFonts.dancingScript(
-                  color: MyColors.clr2,
-                  fontWeight: FontWeight.w700,
-                  // fontSize: 140,
-                  fontSize: MediaQuery.of(context).size.width < 300 ? 30 : 45,
-                ),
-                'Aditya Patel',
-                // style: TextStyle(
-                //   color: MyColors.clr2,
-                //   fontWeight: FontWeight.bold,
-                //   // fontSize: 45.0,
-                //   fontSize: MediaQuery.of(context).size.width < 300 ? 30 : 45,
-                // ),
-              ),
-              const SizedBox(height: 5.0),
-              Text(
-                currentText,
-                style: const TextStyle(
-                    color: MyColors.clrwhite54,
-                    // fontWeight: FontWeight.bold,
-                    fontSize: 15.0),
-              ),
-              const SizedBox(height: 20.0),
-              SizedBox(
-                height: 50,
-                width: 150,
-                // width: double.infinity,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    primary: MyColors.clr1,
-                    onPrimary: MyColors.clr2,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(6.0),
-                      side: BorderSide(color: MyColors.clr2),
-                    ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Stack(
+                    children: [
+                      Positioned(
+                        right: screenWidth > 560 ? 0 : 0,
+                        // left: screenWidth > 560 ? null : 200,
+                        top: screenWidth < 730 ? 60 : null,
+
+                        // left: screenWidth < 700 ? 0 : null,
+                        child: SizedBox(
+                          height: screenWidth > 560 ? 80 : 60,
+
+                          // : screenWidth > 700
+                          //     ? 150
+                          //     : 80,
+                          width: screenWidth > 560 ? 200 : 150,
+                          // : screenWidth > 700
+                          //     ? 300
+                          //     : 170,
+                          child: ObjectPage(
+                            screenWidth: screenWidth,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        height: 200,
+                        // width: 500,
+                        width: screenWidth - 80,
+                        // > 550
+                        //     ? 500
+                        //     : screenWidth > 455
+                        //         ? 450
+                        //         : screenWidth > 355
+                        //             ? 280
+                        //             : 200,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'Hi There! I am,',
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15.0),
+                            ),
+                            const SizedBox(height: 5.0),
+                            Text(
+                              style: GoogleFonts.dancingScript(
+                                color: MyColors.clr2,
+                                fontWeight: FontWeight.w700,
+                                fontSize:
+                                    MediaQuery.of(context).size.width < 355
+                                        ? 30
+                                        : 45,
+                              ),
+                              'Aditya Patel',
+                            ),
+                            const SizedBox(height: 5.0),
+                            Text(
+                              currentText,
+                              style: const TextStyle(
+                                  color: MyColors.clrwhite54,
+                                  // fontWeight: FontWeight.bold,
+                                  fontSize: 15.0),
+                            ),
+                            const SizedBox(height: 20.0),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(
+                                  height: 50,
+                                  width: 150,
+                                  child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      primary: MyColors.clr1,
+                                      onPrimary: MyColors.clr2,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(6.0),
+                                        side: BorderSide(color: MyColors.clr2),
+                                      ),
+                                    ),
+                                    onPressed: () async {
+                                      await goToWebPage(
+                                          "https://www.linkedin.com/in/adityapatel217/");
+                                    },
+                                    child: const Text(
+                                      "Get In Touch",
+                                      style: TextStyle(
+                                          color: MyColors.clr2,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16.0),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                  onPressed: () async {
-                    await goToWebPage(
-                        "https://www.linkedin.com/in/adityapatel217/");
-                  },
-                  child: const Text(
-                    "Get In Touch",
-                    style: TextStyle(
-                      color: MyColors.clr2,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16.0,
-                    ),
-                  ),
-                ),
+                ],
               ),
-              const SizedBox(height: 20.0),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //   children: [
+              //     SizedBox(
+              //       height: 50,
+              //       width: 150,
+              //       child: ElevatedButton(
+              //         style: ElevatedButton.styleFrom(
+              //           primary: MyColors.clr1,
+              //           onPrimary: MyColors.clr2,
+              //           shape: RoundedRectangleBorder(
+              //             borderRadius: BorderRadius.circular(6.0),
+              //             side: BorderSide(color: MyColors.clr2),
+              //           ),
+              //         ),
+              //         onPressed: () async {
+              //           await goToWebPage(
+              //               "https://www.linkedin.com/in/adityapatel217/");
+              //         },
+              //         child: const Text(
+              //           "Get In Touch",
+              //           style: TextStyle(
+              //               color: MyColors.clr2,
+              //               fontWeight: FontWeight.bold,
+              //               fontSize: 18.0),
+              //         ),
+              //       ),
+              //     ),
+              //   ],
+              // ),
+              const SizedBox(
+                height: 28.0,
+              ),
               Text(
                 str,
-                style: const TextStyle(fontSize: 16.0, color: Colors.white60),
+                style: const TextStyle(fontSize: 20.0, color: Colors.white60),
               ),
             ],
           ),
@@ -154,73 +314,148 @@ class _IntroPageState extends State<IntroPage> {
   }
 
   Widget _buildTabletLayout(String str) {
+    final screenWidth = MediaQuery.of(context).size.width;
     return Column(
       children: [
         Container(
+          // width: MediaQuery.of(context).size.width,
           padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 80.0),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            // direction: Axis.horizontal,
             children: [
-              const SizedBox(height: 40.0),
-              const Text(
-                'Hi There! I am,',
-                style: TextStyle(
-                    color: Color.fromARGB(255, 255, 255, 255),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20.0),
-              ),
-              const SizedBox(height: 10.0),
-              Text(
-                style: GoogleFonts.dancingScript(
-                  color: MyColors.clr2,
-                  fontWeight: FontWeight.w700,
-                  fontSize: 65,
-                ),
-                'Aditya Patel',
-                // style: TextStyle(
-                //     color: MyColors.clr2,
-                //     fontWeight: FontWeight.bold,
-                //     fontSize: 65.0),
-              ),
-              const SizedBox(height: 10.0),
-              Text(
-                currentText,
-                style: const TextStyle(
-                    color: MyColors.clrwhite54,
-                    // fontWeight: FontWeight.bold,
-                    fontSize: 25.0),
-              ),
-              const SizedBox(height: 40.0),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
-                    height: 50,
-                    width: 150,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        primary: MyColors.clr1,
-                        onPrimary: MyColors.clr2,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(6.0),
-                          side: BorderSide(color: MyColors.clr2),
+                  Stack(
+                    children: [
+                      Positioned(
+                        right: screenWidth > 700 ? 0 : 50,
+                        // left: screenWidth > 700 ? null : 100,
+                        top: screenWidth < 730 ? 60 : null,
+
+                        // left: screenWidth < 700 ? 0 : null,
+                        child: SizedBox(
+                          height: screenWidth > 730
+                              ? 200
+                              : screenWidth > 700
+                                  ? 150
+                                  : 80,
+                          width: screenWidth > 730
+                              ? 400
+                              : screenWidth > 700
+                                  ? 300
+                                  : 170,
+                          child: ObjectPage(
+                            screenWidth: screenWidth,
+                          ),
                         ),
                       ),
-                      onPressed: () async {
-                        await goToWebPage(
-                            "https://www.linkedin.com/in/adityapatel217/");
-                      },
-                      child: const Text(
-                        "Get In Touch",
-                        style: TextStyle(
-                            color: MyColors.clr2,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18.0),
+                      Container(
+                        height: 300,
+                        // width: 500,
+                        width: screenWidth > 920
+                            ? 800
+                            : screenWidth > 820
+                                ? 700
+                                : screenWidth > 700
+                                    ? 600
+                                    : 500,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'Hi There! I am,',
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20.0),
+                            ),
+                            const SizedBox(height: 10.0),
+                            Text(
+                              style: GoogleFonts.dancingScript(
+                                color: MyColors.clr2,
+                                fontWeight: FontWeight.w700,
+                                fontSize: 65,
+                              ),
+                              'Aditya Patel',
+                            ),
+                            const SizedBox(height: 10.0),
+                            Text(
+                              currentText,
+                              style: const TextStyle(
+                                  color: MyColors.clrwhite54,
+                                  // fontWeight: FontWeight.bold,
+                                  fontSize: 25.0),
+                            ),
+                            const SizedBox(height: 40.0),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(
+                                  height: 50,
+                                  width: 150,
+                                  child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      primary: MyColors.clr1,
+                                      onPrimary: MyColors.clr2,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(6.0),
+                                        side: BorderSide(color: MyColors.clr2),
+                                      ),
+                                    ),
+                                    onPressed: () async {
+                                      await goToWebPage(
+                                          "https://www.linkedin.com/in/adityapatel217/");
+                                    },
+                                    child: const Text(
+                                      "Get In Touch",
+                                      style: TextStyle(
+                                          color: MyColors.clr2,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18.0),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
+                    ],
                   ),
                 ],
               ),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //   children: [
+              //     SizedBox(
+              //       height: 50,
+              //       width: 150,
+              //       child: ElevatedButton(
+              //         style: ElevatedButton.styleFrom(
+              //           primary: MyColors.clr1,
+              //           onPrimary: MyColors.clr2,
+              //           shape: RoundedRectangleBorder(
+              //             borderRadius: BorderRadius.circular(6.0),
+              //             side: BorderSide(color: MyColors.clr2),
+              //           ),
+              //         ),
+              //         onPressed: () async {
+              //           await goToWebPage(
+              //               "https://www.linkedin.com/in/adityapatel217/");
+              //         },
+              //         child: const Text(
+              //           "Get In Touch",
+              //           style: TextStyle(
+              //               color: MyColors.clr2,
+              //               fontWeight: FontWeight.bold,
+              //               fontSize: 18.0),
+              //         ),
+              //       ),
+              //     ),
+              //   ],
+              // ),
               const SizedBox(
                 height: 28.0,
               ),
@@ -241,41 +476,60 @@ class _IntroPageState extends State<IntroPage> {
       children: [
         Container(
           height: MediaQuery.of(context).size.height * 0.8,
+          // height: 1500,
+          width: screenWidth,
           padding: EdgeInsets.fromLTRB(50.0, 100.0, 60.0, 0.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 40.0),
-              const Text(
-                'Hi There! I am,',
-                style: TextStyle(
-                    color: Color.fromARGB(255, 255, 255, 255),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 35.0),
-              ),
-              const SizedBox(height: 5.0),
-              Text(
-                style: GoogleFonts.dancingScript(
-                  color: MyColors.clr2,
-                  fontWeight: FontWeight.w700,
-                  fontSize: 140,
-                ),
-                'Aditya Patel',
+              // const SizedBox(height: 40.0),
+              Row(
+                // crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Hi There! I am,',
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 35.0),
+                      ),
+                      const SizedBox(height: 5.0),
+                      Text(
+                        style: GoogleFonts.dancingScript(
+                          color: MyColors.clr2,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 140,
+                        ),
+                        'Aditya Patel',
 
-                // style: TextStyle(
-                //     color: MyColors.clr2,
-                //     fontWeight: FontWeight.bold,
-                //     fontSize: 95.0),
+                        // style: TextStyle(
+                        //     color: MyColors.clr2,
+                        //     fontWeight: FontWeight.bold,
+                        //     fontSize: 95.0),
+                      ),
+                      const SizedBox(height: 5.0),
+                      Text(
+                        currentText,
+                        style: const TextStyle(
+                            color: MyColors.clrwhite54,
+                            // fontWeight: FontWeight.bold,
+                            fontSize: 30.0),
+                      ),
+                      const SizedBox(height: 50.0),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 200,
+                    width: 400,
+                    child: ObjectPage(
+                      screenWidth: screenWidth,
+                    ),
+                  )
+                ],
               ),
-              const SizedBox(height: 5.0),
-              Text(
-                currentText,
-                style: const TextStyle(
-                    color: MyColors.clrwhite54,
-                    // fontWeight: FontWeight.bold,
-                    fontSize: 30.0),
-              ),
-              const SizedBox(height: 50.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

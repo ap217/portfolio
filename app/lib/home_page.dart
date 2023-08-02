@@ -115,7 +115,8 @@ class _HomePageState extends State<HomePage> {
                                         MediaQuery.of(context).size.width < 200
                                             ? 20
                                             : 40,
-                                    image: AssetImage("assets/dpiconround.png"),
+                                    image: const AssetImage(
+                                        "assets/dpiconround.png"),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
